@@ -1,0 +1,15 @@
+/package-lock.json
+/node_modules/
+
+/bindings/
+/src/
+!/src/scanner.c
+
+/sml.so
+
+/binding.gyp
+/build/
+
+/Cargo.toml
+/Cargo.lock
+/target/
