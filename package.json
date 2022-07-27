@@ -12,7 +12,11 @@
     "scripts": {
         "generate": "tree-sitter generate",
         "pretest": "npm run generate",
-        "test": "tree-sitter test"
+        "test": "tree-sitter test",
+        "parse": "tree-sitter parse",
+        "highlight": "tree-sitter highlight",
+        "prebuild": "npm run test",
+        "build": "cp ${XDG_CACHE_HOME:-${HOME}/.cache}/tree-sitter/lib/sml.so ."
     },
     "dependencies": {
         "nan": "^2.16.0"
@@ -22,6 +26,7 @@
     },
     "tree-sitter": [
       {
+          "scope": "source.ml",
           "file-types": [
               "sml",
               "sig",
