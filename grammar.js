@@ -330,9 +330,9 @@ module.exports = grammar({
         sequence_exp: $ => mkBrakSepBy("(", semicolonSep, $._exp, ")"),
         let_exp: $ => seq(
             "let",
-            field('let_exp_decs', repeat(choice(";", $._dec))),
+            field('decs', repeat(choice(";", $._dec))),
             "in",
-            field('let_exp_body', mkSepBy1(semicolonSep, $._exp)),
+            field('body', mkSepBy1(semicolonSep, $._exp)),
             "end"
         ),
         paren_exp: $ => prec(1, seq("(", $._exp, ")")),
@@ -430,7 +430,7 @@ module.exports = grammar({
         _typbind: $ => mkSepBy1("and", $.typbind),
         typbind: $ => seq(
             field('tyvars', optional($.tyvarseq)),
-            field('tycon', $.tycon),
+            field('name', $.tycon),
             "=",
             field('def', $._ty)
         ),
@@ -443,22 +443,22 @@ module.exports = grammar({
         _datbind: $ => mkSepBy1("and", $.datbind),
         datbind: $ => seq(
             field('tyvars', optional($.tyvarseq)),
-            field('tycon', $.tycon),
+            field('name', $.tycon),
             "=",
             $._conbind
         ),
         _conbind: $ => seq(optBar, mkSepBy1("|", $.conbind)),
         conbind: $ => seq(
-            field('con', seq(optional("op"), $.vid)),
+            field('name', seq(optional("op"), $.vid)),
             optional(seq("of", field('ty', $._ty)))
         ),
 
         datarepl_dec: $ => seq(
             "datatype",
-            field('lhs', $.tycon),
+            field('name', $.tycon),
             "=",
             "datatype",
-            field('rhs', $.longtycon)
+            field('def', $.longtycon)
         ),
 
         abstype_dec: $ => seq(
@@ -474,11 +474,11 @@ module.exports = grammar({
         _exbind: $ => mkSepBy1("and", $.exbind),
         exbind: $ => choice(
             seq(
-                field('con', seq(optional("op"), $.vid)),
+                field('name', seq(optional("op"), $.vid)),
                 optional(seq("of", field('ty', $._ty))),
             ),
             seq(
-                field('con', seq(optional("op"), $.vid)),
+                field('name', seq(optional("op"), $.vid)),
                 "=",
                 field('def', seq(optional("op"), $.longvid)),
             )
@@ -749,22 +749,22 @@ module.exports = grammar({
         ),
         _condesc: $ => seq(optBar, mkSepBy1("|", $.condesc)),
         condesc: $ => seq(
-            field('con', $.vid),
+            field('name', $.vid),
             optional(seq("of", field('ty', $._ty)))
         ),
 
         datarepl_spec: $ => seq(
             "datatype",
-            field('lhs', $.tycon),
+            field('name', $.tycon),
             "=",
             "datatype",
-            field('rhs', $.longtycon)
+            field('def', $.longtycon)
         ),
 
         exception_spec: $ => seq("exception", $._exdesc),
         _exdesc: $ => mkSepBy1("and", $.exdesc),
         exdesc: $ => seq(
-            field('con', $.vid),
+            field('name', $.vid),
             optional(seq("of", field('ty', $._ty))),
         ),
 
