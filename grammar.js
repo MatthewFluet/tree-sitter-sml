@@ -652,10 +652,11 @@ module.exports = grammar({
         structure_strdec: $ => seq("structure", $._strbind),
         _strbind: $ => mkSepBy1("and", $.strbind),
         strbind: $ => seq(
-            $.strid,
+            field('name', $.strid),
             optional(seq(choice(":", ":>"), $._sigexp)),
             "=",
-            $._strexp),
+            $._strexp
+        ),
 
         local_strdec: $ => seq(
             "local",
@@ -698,7 +699,11 @@ module.exports = grammar({
         ),
         signature_sigdec: $ => seq("signature", $._sigbind),
         _sigbind: $ => mkSepBy1("and", $.sigbind),
-        sigbind: $ => seq($.sigid, "=", $._sigexp),
+        sigbind: $ => seq(
+            field('name', $.sigid),
+            "=",
+            $._sigexp
+        ),
 
         // ******************************************************** //
         // Specifications (Modules)
@@ -780,7 +785,7 @@ module.exports = grammar({
         _fctdec: $ => seq("functor", $._fctbind),
         _fctbind: $ => mkSepBy1("and", $.fctbind),
         fctbind: $ => seq(
-            $.fctid,
+            field('name', $.fctid),
             "(",
             choice(
                 seq($.strid, ":", $._sigexp),
