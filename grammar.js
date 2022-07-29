@@ -417,9 +417,9 @@ module.exports = grammar({
         _fmatch: $ => seq(optBar, mkSepBy1("|", $.fmrule)),
         fmrule: $ => seq(
             choice(
-                seq(optional("op"), field('name', $.vid), field('args', repeat1($._atpat))),
-                seq("(", field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat), ")", field('args', repeat($._atpat))),
-                //!! seq($._atpat, field('name', $.vid), $._atpat),
+                prec(2,seq(optional("op"), field('name', $.vid), field('args', repeat1($._atpat)))),
+                prec(2,seq("(", field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat), ")", field('args', repeat($._atpat)))),
+                prec(0,seq(field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat))),
             ),
             optional(seq(":", $._ty)),
             "=",
