@@ -551,13 +551,14 @@ module.exports = grammar({
             $._atpat,
             $.app_pat,
             $.typed_pat,
-            $.conj_pat,
+            ifExtElse('conjPat', $.conj_pat, $.as_pat),
             ifExtAlt(['orPat', 'disjPat'], $.disj_pat),
         ),
 
         app_pat: $ => prec(04, seq($._atpat, repeat1($._atpat))),
         typed_pat: $ => prec(03, seq($._pat, ":", $._ty)),
-        conj_pat: $ => prec.right(02, seq(ifExtElse('conjPat', $._pat, seq(optional("op"), $.vid, optional(seq(":", $._ty)))), "as", $._pat)),
+        as_pat: $ => prec.right(02, seq(optional("op"), $.vid, optional(seq(":", $._ty)), "as", $._pat)),
+        conj_pat: $ => prec.right(02, seq($._pat, "as", $._pat)),
         disj_pat: $ => prec.left(01, seq($._pat, "|", $._pat)),
 
         // ******************************************************** //
