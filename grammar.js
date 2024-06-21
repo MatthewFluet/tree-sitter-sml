@@ -260,8 +260,8 @@ module.exports = grammar({
         integer_scon: $ => token(new RegExp(integerConstRE)),
         word_scon: $ => token(new RegExp(wordConstRE)),
         real_scon: $ => token(new RegExp(realConstRE)),
-        string_scon: $ => token(/"(?:[^"\\]|\\[^\s]|\\\s*\\)*"/m),
-        char_scon: $ => token(/#"(?:[^"\\]|\\[^\s]|\\\s*\\)*"/m),
+        string_scon: $ => token(/"(?:[^"\\]|\\[^\s]|\\\s*\\)*"/),
+        char_scon: $ => token(/#"(?:[^"\\]|\\[^\s]|\\\s*\\)*"/),
 
         // ******************************************************** //
         // Identifier Classes (Core)
