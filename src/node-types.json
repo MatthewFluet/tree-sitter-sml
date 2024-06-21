@@ -1,5 +1,453 @@
 [
   {
+    "type": "_atexp",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "let_exp",
+        "named": true
+      },
+      {
+        "type": "list_exp",
+        "named": true
+      },
+      {
+        "type": "paren_exp",
+        "named": true
+      },
+      {
+        "type": "record_exp",
+        "named": true
+      },
+      {
+        "type": "recordsel_exp",
+        "named": true
+      },
+      {
+        "type": "scon_exp",
+        "named": true
+      },
+      {
+        "type": "sequence_exp",
+        "named": true
+      },
+      {
+        "type": "tuple_exp",
+        "named": true
+      },
+      {
+        "type": "unit_exp",
+        "named": true
+      },
+      {
+        "type": "vec_exp",
+        "named": true
+      },
+      {
+        "type": "vid_exp",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_atpat",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "list_pat",
+        "named": true
+      },
+      {
+        "type": "paren_pat",
+        "named": true
+      },
+      {
+        "type": "record_pat",
+        "named": true
+      },
+      {
+        "type": "scon_pat",
+        "named": true
+      },
+      {
+        "type": "tuple_pat",
+        "named": true
+      },
+      {
+        "type": "unit_pat",
+        "named": true
+      },
+      {
+        "type": "vec_pat",
+        "named": true
+      },
+      {
+        "type": "vid_pat",
+        "named": true
+      },
+      {
+        "type": "wildcard_pat",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_atty",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "record_ty",
+        "named": true
+      },
+      {
+        "type": "tycon_ty",
+        "named": true
+      },
+      {
+        "type": "tyvar_ty",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_dec",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "_dec_no_local",
+        "named": true
+      },
+      {
+        "type": "local_dec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_dec_no_local",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "abstype_dec",
+        "named": true
+      },
+      {
+        "type": "datarepl_dec",
+        "named": true
+      },
+      {
+        "type": "datatype_dec",
+        "named": true
+      },
+      {
+        "type": "do_dec",
+        "named": true
+      },
+      {
+        "type": "exception_dec",
+        "named": true
+      },
+      {
+        "type": "fun_dec",
+        "named": true
+      },
+      {
+        "type": "infix_dec",
+        "named": true
+      },
+      {
+        "type": "infixr_dec",
+        "named": true
+      },
+      {
+        "type": "nonfix_dec",
+        "named": true
+      },
+      {
+        "type": "open_dec",
+        "named": true
+      },
+      {
+        "type": "type_dec",
+        "named": true
+      },
+      {
+        "type": "val_dec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_exp",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "_atexp",
+        "named": true
+      },
+      {
+        "type": "app_exp",
+        "named": true
+      },
+      {
+        "type": "case_exp",
+        "named": true
+      },
+      {
+        "type": "cond_exp",
+        "named": true
+      },
+      {
+        "type": "conj_exp",
+        "named": true
+      },
+      {
+        "type": "disj_exp",
+        "named": true
+      },
+      {
+        "type": "fn_exp",
+        "named": true
+      },
+      {
+        "type": "handle_exp",
+        "named": true
+      },
+      {
+        "type": "iter_exp",
+        "named": true
+      },
+      {
+        "type": "raise_exp",
+        "named": true
+      },
+      {
+        "type": "typed_exp",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_fctdec",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "functor_fctdec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_pat",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "_atpat",
+        "named": true
+      },
+      {
+        "type": "app_pat",
+        "named": true
+      },
+      {
+        "type": "conj_pat",
+        "named": true
+      },
+      {
+        "type": "disj_pat",
+        "named": true
+      },
+      {
+        "type": "typed_pat",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_scon",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "char_scon",
+        "named": true
+      },
+      {
+        "type": "integer_scon",
+        "named": true
+      },
+      {
+        "type": "real_scon",
+        "named": true
+      },
+      {
+        "type": "string_scon",
+        "named": true
+      },
+      {
+        "type": "word_scon",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_sigdec",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "signature_sigdec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_sigexp",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "sig_sigexp",
+        "named": true
+      },
+      {
+        "type": "sigid_sigexp",
+        "named": true
+      },
+      {
+        "type": "wheretype_sigexp",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_spec",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "datarepl_spec",
+        "named": true
+      },
+      {
+        "type": "datatype_spec",
+        "named": true
+      },
+      {
+        "type": "eqtype_spec",
+        "named": true
+      },
+      {
+        "type": "exception_spec",
+        "named": true
+      },
+      {
+        "type": "include_spec",
+        "named": true
+      },
+      {
+        "type": "sharing_spec",
+        "named": true
+      },
+      {
+        "type": "sharingtype_spec",
+        "named": true
+      },
+      {
+        "type": "structure_spec",
+        "named": true
+      },
+      {
+        "type": "type_spec",
+        "named": true
+      },
+      {
+        "type": "val_spec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_strdec",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "_dec_no_local",
+        "named": true
+      },
+      {
+        "type": "local_strdec",
+        "named": true
+      },
+      {
+        "type": "structure_strdec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_strexp",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "constr_strexp",
+        "named": true
+      },
+      {
+        "type": "fctapp_strexp",
+        "named": true
+      },
+      {
+        "type": "let_strexp",
+        "named": true
+      },
+      {
+        "type": "strid_strexp",
+        "named": true
+      },
+      {
+        "type": "struct_strexp",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_topdec",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "_fctdec",
+        "named": true
+      },
+      {
+        "type": "_sigdec",
+        "named": true
+      },
+      {
+        "type": "_strdec",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_ty",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "_atty",
+        "named": true
+      },
+      {
+        "type": "fn_ty",
+        "named": true
+      },
+      {
+        "type": "paren_ty",
+        "named": true
+      },
+      {
+        "type": "tuple_ty",
+        "named": true
+      }
+    ]
+  },
+  {
     "type": "abstype_dec",
     "named": true,
     "fields": {
@@ -12,55 +460,7 @@
             "named": false
           },
           {
-            "type": "abstype_dec",
-            "named": true
-          },
-          {
-            "type": "datarepl_dec",
-            "named": true
-          },
-          {
-            "type": "datatype_dec",
-            "named": true
-          },
-          {
-            "type": "do_dec",
-            "named": true
-          },
-          {
-            "type": "exception_dec",
-            "named": true
-          },
-          {
-            "type": "fun_dec",
-            "named": true
-          },
-          {
-            "type": "infix_dec",
-            "named": true
-          },
-          {
-            "type": "infixr_dec",
-            "named": true
-          },
-          {
-            "type": "local_dec",
-            "named": true
-          },
-          {
-            "type": "nonfix_dec",
-            "named": true
-          },
-          {
-            "type": "open_dec",
-            "named": true
-          },
-          {
-            "type": "type_dec",
-            "named": true
-          },
-          {
-            "type": "val_dec",
+            "type": "_dec",
             "named": true
           }
         ]
@@ -104,47 +504,7 @@
       "required": true,
       "types": [
         {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_atexp",
           "named": true
         }
       ]
@@ -159,39 +519,7 @@
       "required": true,
       "types": [
         {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_atpat",
           "named": true
         }
       ]
@@ -206,91 +534,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
+          "type": "_exp",
           "named": true
         },
         {
           "type": "mrule",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
           "named": true
         }
       ]
@@ -319,27 +567,7 @@
         "required": false,
         "types": [
           {
-            "type": "fn_ty",
-            "named": true
-          },
-          {
-            "type": "paren_ty",
-            "named": true
-          },
-          {
-            "type": "record_ty",
-            "named": true
-          },
-          {
-            "type": "tuple_ty",
-            "named": true
-          },
-          {
-            "type": "tycon_ty",
-            "named": true
-          },
-          {
-            "type": "tyvar_ty",
+            "type": "_ty",
             "named": true
           }
         ]
@@ -355,87 +583,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -460,27 +608,7 @@
         "required": false,
         "types": [
           {
-            "type": "fn_ty",
-            "named": true
-          },
-          {
-            "type": "paren_ty",
-            "named": true
-          },
-          {
-            "type": "record_ty",
-            "named": true
-          },
-          {
-            "type": "tuple_ty",
-            "named": true
-          },
-          {
-            "type": "tycon_ty",
-            "named": true
-          },
-          {
-            "type": "tyvar_ty",
+            "type": "_ty",
             "named": true
           }
         ]
@@ -496,87 +624,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -591,55 +639,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -654,35 +654,11 @@
       "required": true,
       "types": [
         {
-          "type": "constr_strexp",
+          "type": "_sigexp",
           "named": true
         },
         {
-          "type": "fctapp_strexp",
-          "named": true
-        },
-        {
-          "type": "let_strexp",
-          "named": true
-        },
-        {
-          "type": "sig_sigexp",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
-          "named": true
-        },
-        {
-          "type": "strid_strexp",
-          "named": true
-        },
-        {
-          "type": "struct_strexp",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
+          "type": "_strexp",
           "named": true
         }
       ]
@@ -876,87 +852,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -971,55 +867,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -1034,87 +882,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -1129,87 +897,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -1224,87 +912,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -1319,55 +927,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -1382,55 +942,7 @@
       "required": false,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -1442,30 +954,10 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
+          "type": "_ty",
           "named": true
         }
       ]
@@ -1523,27 +1015,7 @@
         "required": false,
         "types": [
           {
-            "type": "fn_ty",
-            "named": true
-          },
-          {
-            "type": "paren_ty",
-            "named": true
-          },
-          {
-            "type": "record_ty",
-            "named": true
-          },
-          {
-            "type": "tuple_ty",
-            "named": true
-          },
-          {
-            "type": "tycon_ty",
-            "named": true
-          },
-          {
-            "type": "tyvar_ty",
+            "type": "_ty",
             "named": true
           }
         ]
@@ -1599,27 +1071,7 @@
         "required": false,
         "types": [
           {
-            "type": "fn_ty",
-            "named": true
-          },
-          {
-            "type": "paren_ty",
-            "named": true
-          },
-          {
-            "type": "record_ty",
-            "named": true
-          },
-          {
-            "type": "tuple_ty",
-            "named": true
-          },
-          {
-            "type": "tycon_ty",
-            "named": true
-          },
-          {
-            "type": "tyvar_ty",
+            "type": "_ty",
             "named": true
           }
         ]
@@ -1635,91 +1087,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
+          "type": "_exp",
           "named": true
         },
         {
           "type": "lab",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
           "named": true
         }
       ]
@@ -1734,83 +1106,15 @@
       "required": true,
       "types": [
         {
-          "type": "abstype_dec",
+          "type": "_strdec",
           "named": true
         },
         {
-          "type": "constr_strexp",
-          "named": true
-        },
-        {
-          "type": "datarepl_dec",
-          "named": true
-        },
-        {
-          "type": "datatype_dec",
-          "named": true
-        },
-        {
-          "type": "do_dec",
-          "named": true
-        },
-        {
-          "type": "exception_dec",
-          "named": true
-        },
-        {
-          "type": "fctapp_strexp",
+          "type": "_strexp",
           "named": true
         },
         {
           "type": "fctid",
-          "named": true
-        },
-        {
-          "type": "fun_dec",
-          "named": true
-        },
-        {
-          "type": "infix_dec",
-          "named": true
-        },
-        {
-          "type": "infixr_dec",
-          "named": true
-        },
-        {
-          "type": "let_strexp",
-          "named": true
-        },
-        {
-          "type": "local_strdec",
-          "named": true
-        },
-        {
-          "type": "nonfix_dec",
-          "named": true
-        },
-        {
-          "type": "open_dec",
-          "named": true
-        },
-        {
-          "type": "strid_strexp",
-          "named": true
-        },
-        {
-          "type": "struct_strexp",
-          "named": true
-        },
-        {
-          "type": "structure_strdec",
-          "named": true
-        },
-        {
-          "type": "type_dec",
-          "named": true
-        },
-        {
-          "type": "val_dec",
           "named": true
         }
       ]
@@ -1836,79 +1140,19 @@
       "required": true,
       "types": [
         {
-          "type": "constr_strexp",
+          "type": "_sigexp",
           "named": true
         },
         {
-          "type": "datarepl_spec",
+          "type": "_spec",
           "named": true
         },
         {
-          "type": "datatype_spec",
-          "named": true
-        },
-        {
-          "type": "eqtype_spec",
-          "named": true
-        },
-        {
-          "type": "exception_spec",
-          "named": true
-        },
-        {
-          "type": "fctapp_strexp",
-          "named": true
-        },
-        {
-          "type": "include_spec",
-          "named": true
-        },
-        {
-          "type": "let_strexp",
-          "named": true
-        },
-        {
-          "type": "sharing_spec",
-          "named": true
-        },
-        {
-          "type": "sharingtype_spec",
-          "named": true
-        },
-        {
-          "type": "sig_sigexp",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
+          "type": "_strexp",
           "named": true
         },
         {
           "type": "strid",
-          "named": true
-        },
-        {
-          "type": "strid_strexp",
-          "named": true
-        },
-        {
-          "type": "struct_strexp",
-          "named": true
-        },
-        {
-          "type": "structure_spec",
-          "named": true
-        },
-        {
-          "type": "type_spec",
-          "named": true
-        },
-        {
-          "type": "val_spec",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
           "named": true
         }
       ]
@@ -1928,39 +1172,7 @@
         "required": false,
         "types": [
           {
-            "type": "list_pat",
-            "named": true
-          },
-          {
-            "type": "paren_pat",
-            "named": true
-          },
-          {
-            "type": "record_pat",
-            "named": true
-          },
-          {
-            "type": "scon_pat",
-            "named": true
-          },
-          {
-            "type": "tuple_pat",
-            "named": true
-          },
-          {
-            "type": "unit_pat",
-            "named": true
-          },
-          {
-            "type": "vec_pat",
-            "named": true
-          },
-          {
-            "type": "vid_pat",
-            "named": true
-          },
-          {
-            "type": "wildcard_pat",
+            "type": "_atpat",
             "named": true
           }
         ]
@@ -1970,39 +1182,7 @@
         "required": false,
         "types": [
           {
-            "type": "list_pat",
-            "named": true
-          },
-          {
-            "type": "paren_pat",
-            "named": true
-          },
-          {
-            "type": "record_pat",
-            "named": true
-          },
-          {
-            "type": "scon_pat",
-            "named": true
-          },
-          {
-            "type": "tuple_pat",
-            "named": true
-          },
-          {
-            "type": "unit_pat",
-            "named": true
-          },
-          {
-            "type": "vec_pat",
-            "named": true
-          },
-          {
-            "type": "vid_pat",
-            "named": true
-          },
-          {
-            "type": "wildcard_pat",
+            "type": "_atpat",
             "named": true
           }
         ]
@@ -2012,39 +1192,7 @@
         "required": false,
         "types": [
           {
-            "type": "list_pat",
-            "named": true
-          },
-          {
-            "type": "paren_pat",
-            "named": true
-          },
-          {
-            "type": "record_pat",
-            "named": true
-          },
-          {
-            "type": "scon_pat",
-            "named": true
-          },
-          {
-            "type": "tuple_pat",
-            "named": true
-          },
-          {
-            "type": "unit_pat",
-            "named": true
-          },
-          {
-            "type": "vec_pat",
-            "named": true
-          },
-          {
-            "type": "vid_pat",
-            "named": true
-          },
-          {
-            "type": "wildcard_pat",
+            "type": "_atpat",
             "named": true
           }
         ]
@@ -2054,87 +1202,7 @@
         "required": true,
         "types": [
           {
-            "type": "app_exp",
-            "named": true
-          },
-          {
-            "type": "case_exp",
-            "named": true
-          },
-          {
-            "type": "cond_exp",
-            "named": true
-          },
-          {
-            "type": "conj_exp",
-            "named": true
-          },
-          {
-            "type": "disj_exp",
-            "named": true
-          },
-          {
-            "type": "fn_exp",
-            "named": true
-          },
-          {
-            "type": "handle_exp",
-            "named": true
-          },
-          {
-            "type": "iter_exp",
-            "named": true
-          },
-          {
-            "type": "let_exp",
-            "named": true
-          },
-          {
-            "type": "list_exp",
-            "named": true
-          },
-          {
-            "type": "paren_exp",
-            "named": true
-          },
-          {
-            "type": "raise_exp",
-            "named": true
-          },
-          {
-            "type": "record_exp",
-            "named": true
-          },
-          {
-            "type": "recordsel_exp",
-            "named": true
-          },
-          {
-            "type": "scon_exp",
-            "named": true
-          },
-          {
-            "type": "sequence_exp",
-            "named": true
-          },
-          {
-            "type": "tuple_exp",
-            "named": true
-          },
-          {
-            "type": "typed_exp",
-            "named": true
-          },
-          {
-            "type": "unit_exp",
-            "named": true
-          },
-          {
-            "type": "vec_exp",
-            "named": true
-          },
-          {
-            "type": "vid_exp",
+            "type": "_exp",
             "named": true
           }
         ]
@@ -2155,27 +1223,7 @@
       "required": false,
       "types": [
         {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
+          "type": "_ty",
           "named": true
         }
       ]
@@ -2205,6 +1253,10 @@
       "required": true,
       "types": [
         {
+          "type": "_atty",
+          "named": true
+        },
+        {
           "type": "fn_ty",
           "named": true
         },
@@ -2213,19 +1265,7 @@
           "named": true
         },
         {
-          "type": "record_ty",
-          "named": true
-        },
-        {
           "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
           "named": true
         }
       ]
@@ -2258,6 +1298,21 @@
     }
   },
   {
+    "type": "functor_fctdec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fctbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "fvalbind",
     "named": true,
     "fields": {},
@@ -2281,91 +1336,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
+          "type": "_exp",
           "named": true
         },
         {
           "type": "mrule",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
           "named": true
         }
       ]
@@ -2380,19 +1355,11 @@
       "required": true,
       "types": [
         {
-          "type": "sig_sigexp",
+          "type": "_sigexp",
           "named": true
         },
         {
           "type": "sigid",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
           "named": true
         }
       ]
@@ -2437,87 +1404,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -2537,27 +1424,7 @@
       "required": true,
       "types": [
         {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
+          "type": "_ty",
           "named": true
         },
         {
@@ -2576,83 +1443,15 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
+          "type": "_pat",
           "named": true
         },
         {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
+          "type": "_ty",
           "named": true
         },
         {
           "type": "vid",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
           "named": true
         }
       ]
@@ -2671,87 +1470,7 @@
             "named": false
           },
           {
-            "type": "app_exp",
-            "named": true
-          },
-          {
-            "type": "case_exp",
-            "named": true
-          },
-          {
-            "type": "cond_exp",
-            "named": true
-          },
-          {
-            "type": "conj_exp",
-            "named": true
-          },
-          {
-            "type": "disj_exp",
-            "named": true
-          },
-          {
-            "type": "fn_exp",
-            "named": true
-          },
-          {
-            "type": "handle_exp",
-            "named": true
-          },
-          {
-            "type": "iter_exp",
-            "named": true
-          },
-          {
-            "type": "let_exp",
-            "named": true
-          },
-          {
-            "type": "list_exp",
-            "named": true
-          },
-          {
-            "type": "paren_exp",
-            "named": true
-          },
-          {
-            "type": "raise_exp",
-            "named": true
-          },
-          {
-            "type": "record_exp",
-            "named": true
-          },
-          {
-            "type": "recordsel_exp",
-            "named": true
-          },
-          {
-            "type": "scon_exp",
-            "named": true
-          },
-          {
-            "type": "sequence_exp",
-            "named": true
-          },
-          {
-            "type": "tuple_exp",
-            "named": true
-          },
-          {
-            "type": "typed_exp",
-            "named": true
-          },
-          {
-            "type": "unit_exp",
-            "named": true
-          },
-          {
-            "type": "vec_exp",
-            "named": true
-          },
-          {
-            "type": "vid_exp",
+            "type": "_exp",
             "named": true
           }
         ]
@@ -2765,55 +1484,7 @@
             "named": false
           },
           {
-            "type": "abstype_dec",
-            "named": true
-          },
-          {
-            "type": "datarepl_dec",
-            "named": true
-          },
-          {
-            "type": "datatype_dec",
-            "named": true
-          },
-          {
-            "type": "do_dec",
-            "named": true
-          },
-          {
-            "type": "exception_dec",
-            "named": true
-          },
-          {
-            "type": "fun_dec",
-            "named": true
-          },
-          {
-            "type": "infix_dec",
-            "named": true
-          },
-          {
-            "type": "infixr_dec",
-            "named": true
-          },
-          {
-            "type": "local_dec",
-            "named": true
-          },
-          {
-            "type": "nonfix_dec",
-            "named": true
-          },
-          {
-            "type": "open_dec",
-            "named": true
-          },
-          {
-            "type": "type_dec",
-            "named": true
-          },
-          {
-            "type": "val_dec",
+            "type": "_dec",
             "named": true
           }
         ]
@@ -2829,79 +1500,11 @@
       "required": true,
       "types": [
         {
-          "type": "abstype_dec",
+          "type": "_strdec",
           "named": true
         },
         {
-          "type": "constr_strexp",
-          "named": true
-        },
-        {
-          "type": "datarepl_dec",
-          "named": true
-        },
-        {
-          "type": "datatype_dec",
-          "named": true
-        },
-        {
-          "type": "do_dec",
-          "named": true
-        },
-        {
-          "type": "exception_dec",
-          "named": true
-        },
-        {
-          "type": "fctapp_strexp",
-          "named": true
-        },
-        {
-          "type": "fun_dec",
-          "named": true
-        },
-        {
-          "type": "infix_dec",
-          "named": true
-        },
-        {
-          "type": "infixr_dec",
-          "named": true
-        },
-        {
-          "type": "let_strexp",
-          "named": true
-        },
-        {
-          "type": "local_strdec",
-          "named": true
-        },
-        {
-          "type": "nonfix_dec",
-          "named": true
-        },
-        {
-          "type": "open_dec",
-          "named": true
-        },
-        {
-          "type": "strid_strexp",
-          "named": true
-        },
-        {
-          "type": "struct_strexp",
-          "named": true
-        },
-        {
-          "type": "structure_strdec",
-          "named": true
-        },
-        {
-          "type": "type_dec",
-          "named": true
-        },
-        {
-          "type": "val_dec",
+          "type": "_strexp",
           "named": true
         }
       ]
@@ -2916,91 +1519,11 @@
       "required": false,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
+          "type": "_exp",
           "named": true
         },
         {
           "type": "ellipsis_listexp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
           "named": true
         }
       ]
@@ -3015,59 +1538,11 @@
       "required": false,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
+          "type": "_pat",
           "named": true
         },
         {
           "type": "ellipsis_listpat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
           "named": true
         }
       ]
@@ -3086,55 +1561,7 @@
             "named": false
           },
           {
-            "type": "abstype_dec",
-            "named": true
-          },
-          {
-            "type": "datarepl_dec",
-            "named": true
-          },
-          {
-            "type": "datatype_dec",
-            "named": true
-          },
-          {
-            "type": "do_dec",
-            "named": true
-          },
-          {
-            "type": "exception_dec",
-            "named": true
-          },
-          {
-            "type": "fun_dec",
-            "named": true
-          },
-          {
-            "type": "infix_dec",
-            "named": true
-          },
-          {
-            "type": "infixr_dec",
-            "named": true
-          },
-          {
-            "type": "local_dec",
-            "named": true
-          },
-          {
-            "type": "nonfix_dec",
-            "named": true
-          },
-          {
-            "type": "open_dec",
-            "named": true
-          },
-          {
-            "type": "type_dec",
-            "named": true
-          },
-          {
-            "type": "val_dec",
+            "type": "_dec",
             "named": true
           }
         ]
@@ -3148,55 +1575,7 @@
             "named": false
           },
           {
-            "type": "abstype_dec",
-            "named": true
-          },
-          {
-            "type": "datarepl_dec",
-            "named": true
-          },
-          {
-            "type": "datatype_dec",
-            "named": true
-          },
-          {
-            "type": "do_dec",
-            "named": true
-          },
-          {
-            "type": "exception_dec",
-            "named": true
-          },
-          {
-            "type": "fun_dec",
-            "named": true
-          },
-          {
-            "type": "infix_dec",
-            "named": true
-          },
-          {
-            "type": "infixr_dec",
-            "named": true
-          },
-          {
-            "type": "local_dec",
-            "named": true
-          },
-          {
-            "type": "nonfix_dec",
-            "named": true
-          },
-          {
-            "type": "open_dec",
-            "named": true
-          },
-          {
-            "type": "type_dec",
-            "named": true
-          },
-          {
-            "type": "val_dec",
+            "type": "_dec",
             "named": true
           }
         ]
@@ -3212,59 +1591,7 @@
       "required": false,
       "types": [
         {
-          "type": "abstype_dec",
-          "named": true
-        },
-        {
-          "type": "datarepl_dec",
-          "named": true
-        },
-        {
-          "type": "datatype_dec",
-          "named": true
-        },
-        {
-          "type": "do_dec",
-          "named": true
-        },
-        {
-          "type": "exception_dec",
-          "named": true
-        },
-        {
-          "type": "fun_dec",
-          "named": true
-        },
-        {
-          "type": "infix_dec",
-          "named": true
-        },
-        {
-          "type": "infixr_dec",
-          "named": true
-        },
-        {
-          "type": "local_strdec",
-          "named": true
-        },
-        {
-          "type": "nonfix_dec",
-          "named": true
-        },
-        {
-          "type": "open_dec",
-          "named": true
-        },
-        {
-          "type": "structure_strdec",
-          "named": true
-        },
-        {
-          "type": "type_dec",
-          "named": true
-        },
-        {
-          "type": "val_dec",
+          "type": "_strdec",
           "named": true
         }
       ]
@@ -3332,139 +1659,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
+          "type": "_exp",
           "named": true
         },
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -3509,87 +1708,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -3604,55 +1723,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -3664,30 +1735,10 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
+          "type": "_ty",
           "named": true
         }
       ]
@@ -3702,59 +1753,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
+          "type": "_pat",
           "named": true
         },
         {
           "type": "lab",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
           "named": true
         }
       ]
@@ -3769,87 +1772,7 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -3944,23 +1867,7 @@
       "required": true,
       "types": [
         {
-          "type": "char_scon",
-          "named": true
-        },
-        {
-          "type": "integer_scon",
-          "named": true
-        },
-        {
-          "type": "real_scon",
-          "named": true
-        },
-        {
-          "type": "string_scon",
-          "named": true
-        },
-        {
-          "type": "word_scon",
+          "type": "_scon",
           "named": true
         }
       ]
@@ -3975,23 +1882,7 @@
       "required": true,
       "types": [
         {
-          "type": "char_scon",
-          "named": true
-        },
-        {
-          "type": "integer_scon",
-          "named": true
-        },
-        {
-          "type": "real_scon",
-          "named": true
-        },
-        {
-          "type": "string_scon",
-          "named": true
-        },
-        {
-          "type": "word_scon",
+          "type": "_scon",
           "named": true
         }
       ]
@@ -4006,87 +1897,7 @@
       "required": false,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -4131,43 +1942,7 @@
       "required": false,
       "types": [
         {
-          "type": "datarepl_spec",
-          "named": true
-        },
-        {
-          "type": "datatype_spec",
-          "named": true
-        },
-        {
-          "type": "eqtype_spec",
-          "named": true
-        },
-        {
-          "type": "exception_spec",
-          "named": true
-        },
-        {
-          "type": "include_spec",
-          "named": true
-        },
-        {
-          "type": "sharing_spec",
-          "named": true
-        },
-        {
-          "type": "sharingtype_spec",
-          "named": true
-        },
-        {
-          "type": "structure_spec",
-          "named": true
-        },
-        {
-          "type": "type_spec",
-          "named": true
-        },
-        {
-          "type": "val_spec",
+          "type": "_spec",
           "named": true
         }
       ]
@@ -4193,15 +1968,7 @@
       "required": true,
       "types": [
         {
-          "type": "sig_sigexp",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
+          "type": "_sigexp",
           "named": true
         }
       ]
@@ -4251,151 +2018,11 @@
       "required": false,
       "types": [
         {
-          "type": "abstype_dec",
+          "type": "_exp",
           "named": true
         },
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "datarepl_dec",
-          "named": true
-        },
-        {
-          "type": "datatype_dec",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "do_dec",
-          "named": true
-        },
-        {
-          "type": "exception_dec",
-          "named": true
-        },
-        {
-          "type": "fctbind",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "fun_dec",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "infix_dec",
-          "named": true
-        },
-        {
-          "type": "infixr_dec",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "local_strdec",
-          "named": true
-        },
-        {
-          "type": "nonfix_dec",
-          "named": true
-        },
-        {
-          "type": "open_dec",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "signature_sigdec",
-          "named": true
-        },
-        {
-          "type": "structure_strdec",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "type_dec",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "val_dec",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_topdec",
           "named": true
         }
       ]
@@ -4421,35 +2048,11 @@
       "required": true,
       "types": [
         {
-          "type": "constr_strexp",
+          "type": "_sigexp",
           "named": true
         },
         {
-          "type": "fctapp_strexp",
-          "named": true
-        },
-        {
-          "type": "let_strexp",
-          "named": true
-        },
-        {
-          "type": "sig_sigexp",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
-          "named": true
-        },
-        {
-          "type": "strid_strexp",
-          "named": true
-        },
-        {
-          "type": "struct_strexp",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
+          "type": "_strexp",
           "named": true
         }
       ]
@@ -4464,19 +2067,11 @@
       "required": true,
       "types": [
         {
-          "type": "sig_sigexp",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
+          "type": "_sigexp",
           "named": true
         },
         {
           "type": "strid",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
           "named": true
         }
       ]
@@ -4511,59 +2106,7 @@
       "required": false,
       "types": [
         {
-          "type": "abstype_dec",
-          "named": true
-        },
-        {
-          "type": "datarepl_dec",
-          "named": true
-        },
-        {
-          "type": "datatype_dec",
-          "named": true
-        },
-        {
-          "type": "do_dec",
-          "named": true
-        },
-        {
-          "type": "exception_dec",
-          "named": true
-        },
-        {
-          "type": "fun_dec",
-          "named": true
-        },
-        {
-          "type": "infix_dec",
-          "named": true
-        },
-        {
-          "type": "infixr_dec",
-          "named": true
-        },
-        {
-          "type": "local_strdec",
-          "named": true
-        },
-        {
-          "type": "nonfix_dec",
-          "named": true
-        },
-        {
-          "type": "open_dec",
-          "named": true
-        },
-        {
-          "type": "structure_strdec",
-          "named": true
-        },
-        {
-          "type": "type_dec",
-          "named": true
-        },
-        {
-          "type": "val_dec",
+          "type": "_strdec",
           "named": true
         }
       ]
@@ -4608,87 +2151,7 @@
       "required": false,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -4703,55 +2166,7 @@
       "required": false,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -4766,19 +2181,11 @@
       "required": true,
       "types": [
         {
+          "type": "_atty",
+          "named": true
+        },
+        {
           "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
           "named": true
         }
       ]
@@ -4817,27 +2224,7 @@
         "required": true,
         "types": [
           {
-            "type": "fn_ty",
-            "named": true
-          },
-          {
-            "type": "paren_ty",
-            "named": true
-          },
-          {
-            "type": "record_ty",
-            "named": true
-          },
-          {
-            "type": "tuple_ty",
-            "named": true
-          },
-          {
-            "type": "tycon_ty",
-            "named": true
-          },
-          {
-            "type": "tyvar_ty",
+            "type": "_ty",
             "named": true
           }
         ]
@@ -4907,111 +2294,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
+          "type": "_exp",
           "named": true
         },
         {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_ty",
           "named": true
         }
       ]
@@ -5026,79 +2313,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_pat",
+          "type": "_pat",
           "named": true
         },
         {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_ty",
           "named": true
         }
       ]
@@ -5132,31 +2351,11 @@
       "required": true,
       "types": [
         {
-          "type": "fn_ty",
+          "type": "_ty",
           "named": true
         },
         {
           "type": "lab",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
           "named": true
         }
       ]
@@ -5168,30 +2367,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
+          "type": "_ty",
           "named": true
         }
       ]
@@ -5292,139 +2471,11 @@
       "required": true,
       "types": [
         {
-          "type": "app_exp",
+          "type": "_exp",
           "named": true
         },
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -5439,27 +2490,7 @@
       "required": true,
       "types": [
         {
-          "type": "fn_ty",
-          "named": true
-        },
-        {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
+          "type": "_ty",
           "named": true
         },
         {
@@ -5478,87 +2509,7 @@
       "required": false,
       "types": [
         {
-          "type": "app_exp",
-          "named": true
-        },
-        {
-          "type": "case_exp",
-          "named": true
-        },
-        {
-          "type": "cond_exp",
-          "named": true
-        },
-        {
-          "type": "conj_exp",
-          "named": true
-        },
-        {
-          "type": "disj_exp",
-          "named": true
-        },
-        {
-          "type": "fn_exp",
-          "named": true
-        },
-        {
-          "type": "handle_exp",
-          "named": true
-        },
-        {
-          "type": "iter_exp",
-          "named": true
-        },
-        {
-          "type": "let_exp",
-          "named": true
-        },
-        {
-          "type": "list_exp",
-          "named": true
-        },
-        {
-          "type": "paren_exp",
-          "named": true
-        },
-        {
-          "type": "raise_exp",
-          "named": true
-        },
-        {
-          "type": "record_exp",
-          "named": true
-        },
-        {
-          "type": "recordsel_exp",
-          "named": true
-        },
-        {
-          "type": "scon_exp",
-          "named": true
-        },
-        {
-          "type": "sequence_exp",
-          "named": true
-        },
-        {
-          "type": "tuple_exp",
-          "named": true
-        },
-        {
-          "type": "typed_exp",
-          "named": true
-        },
-        {
-          "type": "unit_exp",
-          "named": true
-        },
-        {
-          "type": "vec_exp",
-          "named": true
-        },
-        {
-          "type": "vid_exp",
+          "type": "_exp",
           "named": true
         }
       ]
@@ -5573,55 +2524,7 @@
       "required": false,
       "types": [
         {
-          "type": "app_pat",
-          "named": true
-        },
-        {
-          "type": "conj_pat",
-          "named": true
-        },
-        {
-          "type": "disj_pat",
-          "named": true
-        },
-        {
-          "type": "list_pat",
-          "named": true
-        },
-        {
-          "type": "paren_pat",
-          "named": true
-        },
-        {
-          "type": "record_pat",
-          "named": true
-        },
-        {
-          "type": "scon_pat",
-          "named": true
-        },
-        {
-          "type": "tuple_pat",
-          "named": true
-        },
-        {
-          "type": "typed_pat",
-          "named": true
-        },
-        {
-          "type": "unit_pat",
-          "named": true
-        },
-        {
-          "type": "vec_pat",
-          "named": true
-        },
-        {
-          "type": "vid_pat",
-          "named": true
-        },
-        {
-          "type": "wildcard_pat",
+          "type": "_pat",
           "named": true
         }
       ]
@@ -5671,7 +2574,11 @@
       "required": true,
       "types": [
         {
-          "type": "fn_ty",
+          "type": "_sigexp",
+          "named": true
+        },
+        {
+          "type": "_ty",
           "named": true
         },
         {
@@ -5679,39 +2586,7 @@
           "named": true
         },
         {
-          "type": "paren_ty",
-          "named": true
-        },
-        {
-          "type": "record_ty",
-          "named": true
-        },
-        {
-          "type": "sig_sigexp",
-          "named": true
-        },
-        {
-          "type": "sigid_sigexp",
-          "named": true
-        },
-        {
-          "type": "tuple_ty",
-          "named": true
-        },
-        {
-          "type": "tycon_ty",
-          "named": true
-        },
-        {
-          "type": "tyvar_ty",
-          "named": true
-        },
-        {
           "type": "tyvarseq",
-          "named": true
-        },
-        {
-          "type": "wheretype_sigexp",
           "named": true
         }
       ]

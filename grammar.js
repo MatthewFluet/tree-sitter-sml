@@ -229,6 +229,22 @@ module.exports = grammar({
     ],
 
     supertypes: $ => [
+        $._scon,
+        $._atexp,
+        $._exp,
+        $._dec,
+        $._dec_no_local,
+        $._atpat,
+        $._pat,
+        $._atty,
+        $._ty,
+        $._strexp,
+        $._strdec,
+        $._sigexp,
+        $._sigdec,
+        $._spec,
+        $._fctdec,
+        $._topdec,
     ],
 
     inline: $ => [
@@ -789,7 +805,10 @@ module.exports = grammar({
         // Functors (Modules)
         // ******************************************************** //
 
-        _fctdec: $ => seq("functor", $._fctbind),
+        _fctdec: $ => choice(
+            $.functor_fctdec,
+        ),
+        functor_fctdec: $ => seq("functor", $._fctbind),
         _fctbind: $ => mkSepBy1("and", $.fctbind),
         fctbind: $ => seq(
             field('name', $.fctid),
