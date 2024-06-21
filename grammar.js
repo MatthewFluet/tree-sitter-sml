@@ -1,3 +1,6 @@
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 // ******************************************************** //
 // Extensions
 // ******************************************************** //
@@ -223,6 +226,9 @@ module.exports = grammar({
     externals: $ => [
         $.block_comment,
         $.line_comment,
+    ],
+
+    supertypes: $ => [
     ],
 
     inline: $ => [

@@ -1,0 +1,5992 @@
+[
+  {
+    "type": "abstype_dec",
+    "named": true,
+    "fields": {
+      "decs": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "abstype_dec",
+            "named": true
+          },
+          {
+            "type": "datarepl_dec",
+            "named": true
+          },
+          {
+            "type": "datatype_dec",
+            "named": true
+          },
+          {
+            "type": "do_dec",
+            "named": true
+          },
+          {
+            "type": "exception_dec",
+            "named": true
+          },
+          {
+            "type": "fun_dec",
+            "named": true
+          },
+          {
+            "type": "infix_dec",
+            "named": true
+          },
+          {
+            "type": "infixr_dec",
+            "named": true
+          },
+          {
+            "type": "local_dec",
+            "named": true
+          },
+          {
+            "type": "nonfix_dec",
+            "named": true
+          },
+          {
+            "type": "open_dec",
+            "named": true
+          },
+          {
+            "type": "type_dec",
+            "named": true
+          },
+          {
+            "type": "val_dec",
+            "named": true
+          }
+        ]
+      },
+      "withtype": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "typbind",
+            "named": true
+          },
+          {
+            "type": "withtype",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "datbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "app_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "app_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "case_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "mrule",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conbind",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "op",
+            "named": false
+          },
+          {
+            "type": "vid",
+            "named": true
+          }
+        ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_ty",
+            "named": true
+          },
+          {
+            "type": "paren_ty",
+            "named": true
+          },
+          {
+            "type": "record_ty",
+            "named": true
+          },
+          {
+            "type": "tuple_ty",
+            "named": true
+          },
+          {
+            "type": "tycon_ty",
+            "named": true
+          },
+          {
+            "type": "tyvar_ty",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "cond_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "condesc",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "vid",
+            "named": true
+          }
+        ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_ty",
+            "named": true
+          },
+          {
+            "type": "paren_ty",
+            "named": true
+          },
+          {
+            "type": "record_ty",
+            "named": true
+          },
+          {
+            "type": "tuple_ty",
+            "named": true
+          },
+          {
+            "type": "tycon_ty",
+            "named": true
+          },
+          {
+            "type": "tyvar_ty",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "conj_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conj_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constr_strexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constr_strexp",
+          "named": true
+        },
+        {
+          "type": "fctapp_strexp",
+          "named": true
+        },
+        {
+          "type": "let_strexp",
+          "named": true
+        },
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "strid_strexp",
+          "named": true
+        },
+        {
+          "type": "struct_strexp",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datarepl_dec",
+    "named": true,
+    "fields": {
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "longtycon",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tycon",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "datarepl_spec",
+    "named": true,
+    "fields": {
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "longtycon",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tycon",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "datatype_dec",
+    "named": true,
+    "fields": {
+      "withtype": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "typbind",
+            "named": true
+          },
+          {
+            "type": "withtype",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "datbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datatype_spec",
+    "named": true,
+    "fields": {
+      "withtype": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "typbind",
+            "named": true
+          },
+          {
+            "type": "withtype",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "datdesc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datbind",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tycon",
+            "named": true
+          }
+        ]
+      },
+      "tyvars": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "tyvarseq",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datdesc",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "condesc",
+          "named": true
+        },
+        {
+          "type": "tycon",
+          "named": true
+        },
+        {
+          "type": "tyvarseq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "disj_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "disj_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "do_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsis_exprow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsis_listexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsis_listpat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsis_patrow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ellipsis_tyrow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "eqtype_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "typedesc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exbind",
+    "named": true,
+    "fields": {
+      "def": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "longvid",
+            "named": true
+          },
+          {
+            "type": "op",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "op",
+            "named": false
+          },
+          {
+            "type": "vid",
+            "named": true
+          }
+        ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_ty",
+            "named": true
+          },
+          {
+            "type": "paren_ty",
+            "named": true
+          },
+          {
+            "type": "record_ty",
+            "named": true
+          },
+          {
+            "type": "tuple_ty",
+            "named": true
+          },
+          {
+            "type": "tycon_ty",
+            "named": true
+          },
+          {
+            "type": "tyvar_ty",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exception_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "exbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exception_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "exdesc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exdesc",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "vid",
+            "named": true
+          }
+        ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "fn_ty",
+            "named": true
+          },
+          {
+            "type": "paren_ty",
+            "named": true
+          },
+          {
+            "type": "record_ty",
+            "named": true
+          },
+          {
+            "type": "tuple_ty",
+            "named": true
+          },
+          {
+            "type": "tycon_ty",
+            "named": true
+          },
+          {
+            "type": "tyvar_ty",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exprow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "lab",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fctapp_strexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "abstype_dec",
+          "named": true
+        },
+        {
+          "type": "constr_strexp",
+          "named": true
+        },
+        {
+          "type": "datarepl_dec",
+          "named": true
+        },
+        {
+          "type": "datatype_dec",
+          "named": true
+        },
+        {
+          "type": "do_dec",
+          "named": true
+        },
+        {
+          "type": "exception_dec",
+          "named": true
+        },
+        {
+          "type": "fctapp_strexp",
+          "named": true
+        },
+        {
+          "type": "fctid",
+          "named": true
+        },
+        {
+          "type": "fun_dec",
+          "named": true
+        },
+        {
+          "type": "infix_dec",
+          "named": true
+        },
+        {
+          "type": "infixr_dec",
+          "named": true
+        },
+        {
+          "type": "let_strexp",
+          "named": true
+        },
+        {
+          "type": "local_strdec",
+          "named": true
+        },
+        {
+          "type": "nonfix_dec",
+          "named": true
+        },
+        {
+          "type": "open_dec",
+          "named": true
+        },
+        {
+          "type": "strid_strexp",
+          "named": true
+        },
+        {
+          "type": "struct_strexp",
+          "named": true
+        },
+        {
+          "type": "structure_strdec",
+          "named": true
+        },
+        {
+          "type": "type_dec",
+          "named": true
+        },
+        {
+          "type": "val_dec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fctbind",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fctid",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constr_strexp",
+          "named": true
+        },
+        {
+          "type": "datarepl_spec",
+          "named": true
+        },
+        {
+          "type": "datatype_spec",
+          "named": true
+        },
+        {
+          "type": "eqtype_spec",
+          "named": true
+        },
+        {
+          "type": "exception_spec",
+          "named": true
+        },
+        {
+          "type": "fctapp_strexp",
+          "named": true
+        },
+        {
+          "type": "include_spec",
+          "named": true
+        },
+        {
+          "type": "let_strexp",
+          "named": true
+        },
+        {
+          "type": "sharing_spec",
+          "named": true
+        },
+        {
+          "type": "sharingtype_spec",
+          "named": true
+        },
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "strid",
+          "named": true
+        },
+        {
+          "type": "strid_strexp",
+          "named": true
+        },
+        {
+          "type": "struct_strexp",
+          "named": true
+        },
+        {
+          "type": "structure_spec",
+          "named": true
+        },
+        {
+          "type": "type_spec",
+          "named": true
+        },
+        {
+          "type": "val_spec",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fctid",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "fmrule",
+    "named": true,
+    "fields": {
+      "argl": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
+            "named": true
+          }
+        ]
+      },
+      "argr": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
+            "named": true
+          }
+        ]
+      },
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
+            "named": true
+          }
+        ]
+      },
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "app_exp",
+            "named": true
+          },
+          {
+            "type": "case_exp",
+            "named": true
+          },
+          {
+            "type": "cond_exp",
+            "named": true
+          },
+          {
+            "type": "conj_exp",
+            "named": true
+          },
+          {
+            "type": "disj_exp",
+            "named": true
+          },
+          {
+            "type": "fn_exp",
+            "named": true
+          },
+          {
+            "type": "handle_exp",
+            "named": true
+          },
+          {
+            "type": "iter_exp",
+            "named": true
+          },
+          {
+            "type": "let_exp",
+            "named": true
+          },
+          {
+            "type": "list_exp",
+            "named": true
+          },
+          {
+            "type": "paren_exp",
+            "named": true
+          },
+          {
+            "type": "raise_exp",
+            "named": true
+          },
+          {
+            "type": "record_exp",
+            "named": true
+          },
+          {
+            "type": "recordsel_exp",
+            "named": true
+          },
+          {
+            "type": "scon_exp",
+            "named": true
+          },
+          {
+            "type": "sequence_exp",
+            "named": true
+          },
+          {
+            "type": "tuple_exp",
+            "named": true
+          },
+          {
+            "type": "typed_exp",
+            "named": true
+          },
+          {
+            "type": "unit_exp",
+            "named": true
+          },
+          {
+            "type": "vec_exp",
+            "named": true
+          },
+          {
+            "type": "vid_exp",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "vid",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "mrule",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fn_ty",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fun_dec",
+    "named": true,
+    "fields": {
+      "tyvars": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "tyvarseq",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fvalbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fvalbind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fmrule",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "handle_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "mrule",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "infix_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "vid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "infixr_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "vid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "iter_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lab",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "labvar_exprow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        },
+        {
+          "type": "vid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "labvar_patrow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "let_exp",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "app_exp",
+            "named": true
+          },
+          {
+            "type": "case_exp",
+            "named": true
+          },
+          {
+            "type": "cond_exp",
+            "named": true
+          },
+          {
+            "type": "conj_exp",
+            "named": true
+          },
+          {
+            "type": "disj_exp",
+            "named": true
+          },
+          {
+            "type": "fn_exp",
+            "named": true
+          },
+          {
+            "type": "handle_exp",
+            "named": true
+          },
+          {
+            "type": "iter_exp",
+            "named": true
+          },
+          {
+            "type": "let_exp",
+            "named": true
+          },
+          {
+            "type": "list_exp",
+            "named": true
+          },
+          {
+            "type": "paren_exp",
+            "named": true
+          },
+          {
+            "type": "raise_exp",
+            "named": true
+          },
+          {
+            "type": "record_exp",
+            "named": true
+          },
+          {
+            "type": "recordsel_exp",
+            "named": true
+          },
+          {
+            "type": "scon_exp",
+            "named": true
+          },
+          {
+            "type": "sequence_exp",
+            "named": true
+          },
+          {
+            "type": "tuple_exp",
+            "named": true
+          },
+          {
+            "type": "typed_exp",
+            "named": true
+          },
+          {
+            "type": "unit_exp",
+            "named": true
+          },
+          {
+            "type": "vec_exp",
+            "named": true
+          },
+          {
+            "type": "vid_exp",
+            "named": true
+          }
+        ]
+      },
+      "decs": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "abstype_dec",
+            "named": true
+          },
+          {
+            "type": "datarepl_dec",
+            "named": true
+          },
+          {
+            "type": "datatype_dec",
+            "named": true
+          },
+          {
+            "type": "do_dec",
+            "named": true
+          },
+          {
+            "type": "exception_dec",
+            "named": true
+          },
+          {
+            "type": "fun_dec",
+            "named": true
+          },
+          {
+            "type": "infix_dec",
+            "named": true
+          },
+          {
+            "type": "infixr_dec",
+            "named": true
+          },
+          {
+            "type": "local_dec",
+            "named": true
+          },
+          {
+            "type": "nonfix_dec",
+            "named": true
+          },
+          {
+            "type": "open_dec",
+            "named": true
+          },
+          {
+            "type": "type_dec",
+            "named": true
+          },
+          {
+            "type": "val_dec",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "let_strexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "abstype_dec",
+          "named": true
+        },
+        {
+          "type": "constr_strexp",
+          "named": true
+        },
+        {
+          "type": "datarepl_dec",
+          "named": true
+        },
+        {
+          "type": "datatype_dec",
+          "named": true
+        },
+        {
+          "type": "do_dec",
+          "named": true
+        },
+        {
+          "type": "exception_dec",
+          "named": true
+        },
+        {
+          "type": "fctapp_strexp",
+          "named": true
+        },
+        {
+          "type": "fun_dec",
+          "named": true
+        },
+        {
+          "type": "infix_dec",
+          "named": true
+        },
+        {
+          "type": "infixr_dec",
+          "named": true
+        },
+        {
+          "type": "let_strexp",
+          "named": true
+        },
+        {
+          "type": "local_strdec",
+          "named": true
+        },
+        {
+          "type": "nonfix_dec",
+          "named": true
+        },
+        {
+          "type": "open_dec",
+          "named": true
+        },
+        {
+          "type": "strid_strexp",
+          "named": true
+        },
+        {
+          "type": "struct_strexp",
+          "named": true
+        },
+        {
+          "type": "structure_strdec",
+          "named": true
+        },
+        {
+          "type": "type_dec",
+          "named": true
+        },
+        {
+          "type": "val_dec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "ellipsis_listexp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "ellipsis_listpat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "local_dec",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "abstype_dec",
+            "named": true
+          },
+          {
+            "type": "datarepl_dec",
+            "named": true
+          },
+          {
+            "type": "datatype_dec",
+            "named": true
+          },
+          {
+            "type": "do_dec",
+            "named": true
+          },
+          {
+            "type": "exception_dec",
+            "named": true
+          },
+          {
+            "type": "fun_dec",
+            "named": true
+          },
+          {
+            "type": "infix_dec",
+            "named": true
+          },
+          {
+            "type": "infixr_dec",
+            "named": true
+          },
+          {
+            "type": "local_dec",
+            "named": true
+          },
+          {
+            "type": "nonfix_dec",
+            "named": true
+          },
+          {
+            "type": "open_dec",
+            "named": true
+          },
+          {
+            "type": "type_dec",
+            "named": true
+          },
+          {
+            "type": "val_dec",
+            "named": true
+          }
+        ]
+      },
+      "decs": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "abstype_dec",
+            "named": true
+          },
+          {
+            "type": "datarepl_dec",
+            "named": true
+          },
+          {
+            "type": "datatype_dec",
+            "named": true
+          },
+          {
+            "type": "do_dec",
+            "named": true
+          },
+          {
+            "type": "exception_dec",
+            "named": true
+          },
+          {
+            "type": "fun_dec",
+            "named": true
+          },
+          {
+            "type": "infix_dec",
+            "named": true
+          },
+          {
+            "type": "infixr_dec",
+            "named": true
+          },
+          {
+            "type": "local_dec",
+            "named": true
+          },
+          {
+            "type": "nonfix_dec",
+            "named": true
+          },
+          {
+            "type": "open_dec",
+            "named": true
+          },
+          {
+            "type": "type_dec",
+            "named": true
+          },
+          {
+            "type": "val_dec",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "local_strdec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstype_dec",
+          "named": true
+        },
+        {
+          "type": "datarepl_dec",
+          "named": true
+        },
+        {
+          "type": "datatype_dec",
+          "named": true
+        },
+        {
+          "type": "do_dec",
+          "named": true
+        },
+        {
+          "type": "exception_dec",
+          "named": true
+        },
+        {
+          "type": "fun_dec",
+          "named": true
+        },
+        {
+          "type": "infix_dec",
+          "named": true
+        },
+        {
+          "type": "infixr_dec",
+          "named": true
+        },
+        {
+          "type": "local_strdec",
+          "named": true
+        },
+        {
+          "type": "nonfix_dec",
+          "named": true
+        },
+        {
+          "type": "open_dec",
+          "named": true
+        },
+        {
+          "type": "structure_strdec",
+          "named": true
+        },
+        {
+          "type": "type_dec",
+          "named": true
+        },
+        {
+          "type": "val_dec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "longstrid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "strid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "longtycon",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "strid",
+          "named": true
+        },
+        {
+          "type": "tycon",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "longvid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "strid",
+          "named": true
+        },
+        {
+          "type": "vid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mrule",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nonfix_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "vid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "open_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "longstrid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paren_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paren_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paren_ty",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "patrow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "lab",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raise_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ellipsis_exprow",
+          "named": true
+        },
+        {
+          "type": "exprow",
+          "named": true
+        },
+        {
+          "type": "labvar_exprow",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ellipsis_patrow",
+          "named": true
+        },
+        {
+          "type": "labvar_patrow",
+          "named": true
+        },
+        {
+          "type": "patrow",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_ty",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ellipsis_tyrow",
+          "named": true
+        },
+        {
+          "type": "tyrow",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "recordsel_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "lab",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scon_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "char_scon",
+          "named": true
+        },
+        {
+          "type": "integer_scon",
+          "named": true
+        },
+        {
+          "type": "real_scon",
+          "named": true
+        },
+        {
+          "type": "string_scon",
+          "named": true
+        },
+        {
+          "type": "word_scon",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scon_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "char_scon",
+          "named": true
+        },
+        {
+          "type": "integer_scon",
+          "named": true
+        },
+        {
+          "type": "real_scon",
+          "named": true
+        },
+        {
+          "type": "string_scon",
+          "named": true
+        },
+        {
+          "type": "word_scon",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sequence_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sharing_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "longstrid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sharingtype_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "longtycon",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sig_sigexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "datarepl_spec",
+          "named": true
+        },
+        {
+          "type": "datatype_spec",
+          "named": true
+        },
+        {
+          "type": "eqtype_spec",
+          "named": true
+        },
+        {
+          "type": "exception_spec",
+          "named": true
+        },
+        {
+          "type": "include_spec",
+          "named": true
+        },
+        {
+          "type": "sharing_spec",
+          "named": true
+        },
+        {
+          "type": "sharingtype_spec",
+          "named": true
+        },
+        {
+          "type": "structure_spec",
+          "named": true
+        },
+        {
+          "type": "type_spec",
+          "named": true
+        },
+        {
+          "type": "val_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sigbind",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "sigid",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sigid",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sigid_sigexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "sigid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "signature_sigdec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "sigbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstype_dec",
+          "named": true
+        },
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "datarepl_dec",
+          "named": true
+        },
+        {
+          "type": "datatype_dec",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "do_dec",
+          "named": true
+        },
+        {
+          "type": "exception_dec",
+          "named": true
+        },
+        {
+          "type": "fctbind",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "fun_dec",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "infix_dec",
+          "named": true
+        },
+        {
+          "type": "infixr_dec",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "local_strdec",
+          "named": true
+        },
+        {
+          "type": "nonfix_dec",
+          "named": true
+        },
+        {
+          "type": "open_dec",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "signature_sigdec",
+          "named": true
+        },
+        {
+          "type": "structure_strdec",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "type_dec",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "val_dec",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "strbind",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "strid",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constr_strexp",
+          "named": true
+        },
+        {
+          "type": "fctapp_strexp",
+          "named": true
+        },
+        {
+          "type": "let_strexp",
+          "named": true
+        },
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "strid_strexp",
+          "named": true
+        },
+        {
+          "type": "struct_strexp",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "strdesc",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "strid",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "strid",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "strid_strexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "longstrid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_strexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstype_dec",
+          "named": true
+        },
+        {
+          "type": "datarepl_dec",
+          "named": true
+        },
+        {
+          "type": "datatype_dec",
+          "named": true
+        },
+        {
+          "type": "do_dec",
+          "named": true
+        },
+        {
+          "type": "exception_dec",
+          "named": true
+        },
+        {
+          "type": "fun_dec",
+          "named": true
+        },
+        {
+          "type": "infix_dec",
+          "named": true
+        },
+        {
+          "type": "infixr_dec",
+          "named": true
+        },
+        {
+          "type": "local_strdec",
+          "named": true
+        },
+        {
+          "type": "nonfix_dec",
+          "named": true
+        },
+        {
+          "type": "open_dec",
+          "named": true
+        },
+        {
+          "type": "structure_strdec",
+          "named": true
+        },
+        {
+          "type": "type_dec",
+          "named": true
+        },
+        {
+          "type": "val_dec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structure_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "strdesc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structure_strdec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "strbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_ty",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tycon",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "tycon_ty",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "longtycon",
+          "named": true
+        },
+        {
+          "type": "tyseq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typbind",
+    "named": true,
+    "fields": {
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fn_ty",
+            "named": true
+          },
+          {
+            "type": "paren_ty",
+            "named": true
+          },
+          {
+            "type": "record_ty",
+            "named": true
+          },
+          {
+            "type": "tuple_ty",
+            "named": true
+          },
+          {
+            "type": "tycon_ty",
+            "named": true
+          },
+          {
+            "type": "tyvar_ty",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tycon",
+            "named": true
+          }
+        ]
+      },
+      "tyvars": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "tyvarseq",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "type_dec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "typbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "typbind",
+          "named": true
+        },
+        {
+          "type": "typedesc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typed_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typed_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typedesc",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "tycon",
+          "named": true
+        },
+        {
+          "type": "tyvarseq",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tyrow",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "lab",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tyseq",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tyvar",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "tyvar_ty",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "tyvar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tyvarseq",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "tyvar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unit_exp",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "unit_pat",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "val_dec",
+    "named": true,
+    "fields": {
+      "tyvars": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "tyvarseq",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "valbind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "val_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "valdesc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "valbind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "valdesc",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        },
+        {
+          "type": "vid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vec_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_exp",
+          "named": true
+        },
+        {
+          "type": "case_exp",
+          "named": true
+        },
+        {
+          "type": "cond_exp",
+          "named": true
+        },
+        {
+          "type": "conj_exp",
+          "named": true
+        },
+        {
+          "type": "disj_exp",
+          "named": true
+        },
+        {
+          "type": "fn_exp",
+          "named": true
+        },
+        {
+          "type": "handle_exp",
+          "named": true
+        },
+        {
+          "type": "iter_exp",
+          "named": true
+        },
+        {
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "raise_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "typed_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vec_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_pat",
+          "named": true
+        },
+        {
+          "type": "conj_pat",
+          "named": true
+        },
+        {
+          "type": "disj_pat",
+          "named": true
+        },
+        {
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "typed_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vid",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "vid_exp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "longvid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vid_pat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "longvid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "wheretype_sigexp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "fn_ty",
+          "named": true
+        },
+        {
+          "type": "longtycon",
+          "named": true
+        },
+        {
+          "type": "paren_ty",
+          "named": true
+        },
+        {
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "sig_sigexp",
+          "named": true
+        },
+        {
+          "type": "sigid_sigexp",
+          "named": true
+        },
+        {
+          "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
+          "named": true
+        },
+        {
+          "type": "tyvarseq",
+          "named": true
+        },
+        {
+          "type": "wheretype_sigexp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "#[",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "...",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ":>",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "=>",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "abstype",
+    "named": false
+  },
+  {
+    "type": "and",
+    "named": false
+  },
+  {
+    "type": "andalso",
+    "named": false
+  },
+  {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "block_comment",
+    "named": true
+  },
+  {
+    "type": "case",
+    "named": false
+  },
+  {
+    "type": "char_scon",
+    "named": true
+  },
+  {
+    "type": "datatype",
+    "named": false
+  },
+  {
+    "type": "do",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "end",
+    "named": false
+  },
+  {
+    "type": "eqtype",
+    "named": false
+  },
+  {
+    "type": "exception",
+    "named": false
+  },
+  {
+    "type": "fn",
+    "named": false
+  },
+  {
+    "type": "fun",
+    "named": false
+  },
+  {
+    "type": "functor",
+    "named": false
+  },
+  {
+    "type": "handle",
+    "named": false
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "include",
+    "named": false
+  },
+  {
+    "type": "infix",
+    "named": false
+  },
+  {
+    "type": "infixr",
+    "named": false
+  },
+  {
+    "type": "integer_scon",
+    "named": true
+  },
+  {
+    "type": "let",
+    "named": false
+  },
+  {
+    "type": "line_comment",
+    "named": true
+  },
+  {
+    "type": "local",
+    "named": false
+  },
+  {
+    "type": "nonfix",
+    "named": false
+  },
+  {
+    "type": "of",
+    "named": false
+  },
+  {
+    "type": "op",
+    "named": false
+  },
+  {
+    "type": "open",
+    "named": false
+  },
+  {
+    "type": "orelse",
+    "named": false
+  },
+  {
+    "type": "raise",
+    "named": false
+  },
+  {
+    "type": "real_scon",
+    "named": true
+  },
+  {
+    "type": "rec",
+    "named": false
+  },
+  {
+    "type": "sharing",
+    "named": false
+  },
+  {
+    "type": "sig",
+    "named": false
+  },
+  {
+    "type": "signature",
+    "named": false
+  },
+  {
+    "type": "string_scon",
+    "named": true
+  },
+  {
+    "type": "struct",
+    "named": false
+  },
+  {
+    "type": "structure",
+    "named": false
+  },
+  {
+    "type": "then",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "val",
+    "named": false
+  },
+  {
+    "type": "where",
+    "named": false
+  },
+  {
+    "type": "while",
+    "named": false
+  },
+  {
+    "type": "wildcard_pat",
+    "named": true
+  },
+  {
+    "type": "with",
+    "named": false
+  },
+  {
+    "type": "withtype",
+    "named": false
+  },
+  {
+    "type": "word_scon",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

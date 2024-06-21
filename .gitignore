@@ -1,15 +1,38 @@
-/package-lock.json
-/node_modules/
+# Rust artifacts
+Cargo.lock
+target/
 
-/bindings/
-/src/
-!/src/scanner.c
+# Node artifacts
+build/
+prebuilds/
+node_modules/
+*.tgz
 
-/sml.so
+# Swift artifacts
+.build/
 
-/binding.gyp
-/build/
+# Go artifacts
+go.sum
+_obj/
 
-/Cargo.toml
-/Cargo.lock
-/target/
+# Python artifacts
+.venv/
+dist/
+*.egg-info
+*.whl
+
+# C artifacts
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.pc
+
+# Example dirs
+/examples/*/
+
+# Grammar volatiles
+*.wasm
+*.obj
+*.o

@@ -1,38 +1,61 @@
 {
-    "name": "tree-sitter-sml",
-    "description": "Standard ML (SML) grammar for tree-sitter",
-    "version": "0.1.0",
-    "author": "Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/MatthewFluet/tree-sitter-sml.git"
-    },
-    "main": "bindings/node",
-    "scripts": {
-        "generate": "tree-sitter generate",
-        "pretest": "npm run generate",
-        "test": "tree-sitter test",
-        "parse": "tree-sitter parse",
-        "highlight": "tree-sitter highlight",
-        "prebuild": "npm run test",
-        "build": "cp ${XDG_CACHE_HOME:-${HOME}/.cache}/tree-sitter/lib/sml.so ."
-    },
-    "dependencies": {
-        "nan": "^2.16.0"
-    },
-    "devDependencies": {
-        "tree-sitter-cli": "^0.20.6"
-    },
-    "tree-sitter": [
-      {
-          "scope": "source.ml",
-          "file-types": [
-              "sml",
-              "sig",
-              "fun",
-              "ML"
-          ]
-      }
-    ]
+  "name": "tree-sitter-sml",
+  "version": "0.2.0",
+  "description": "Standard ML (SML) grammar for tree-sitter",
+  "author": "Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)",
+  "repository": "github:MatthewFluet/tree-sitter-sml",
+  "license": "MIT",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "incremental",
+    "parsing",
+    "tree-sitter",
+    "standard-ml",
+    "sml"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0",
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "^0.22.6"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip",
+    "build": "tree-sitter generate --no-bindings",
+    "build-wasm": "tree-sitter build --wasm",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.sml",
+      "injection-regex": "^sml$",
+      "file-types": [
+        "sml", "sig", "fun", "ML"
+      ],
+      "highlights": "queries/highlights.scm"
+    }
+  ]
 }
