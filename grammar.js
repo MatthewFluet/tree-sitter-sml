@@ -235,7 +235,7 @@ module.exports = grammar({
         ],
     ],
 
-    // word: $ => $._ident,
+    word: $ => $._alphaAlphaNumeric_ident,
 
     rules: {
         source_file: $ => optional($._program),
@@ -815,12 +815,6 @@ module.exports = grammar({
             choice(repeat1($._topdec),$._exp),
             optional(seq(";", optional($._program)))
         ),
-
-        // ******************************************************** //
-        // Misc
-        // ******************************************************** //
-
-        _ident: $ => token(new RegExp(identRE)),
 
     },
 });
