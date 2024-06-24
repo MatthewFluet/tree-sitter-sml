@@ -142,7 +142,7 @@ function mkSepByCntFstLst(sep, elt, cnt, fst, lst) {
                 }
             } else {
                 if (pre) {
-                    return optional(seq(sep, lst.elt, pstSep))
+                    return seq(optional(seq(sep, lst.elt)), pstSep)
                 } else {
                     return optional(seq(lst.elt, pstSep))
                 }

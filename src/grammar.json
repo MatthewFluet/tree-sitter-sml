@@ -438,27 +438,13 @@
                       }
                     },
                     {
-                      "type": "CHOICE",
+                      "type": "SEQ",
                       "members": [
                         {
-                          "type": "SEQ",
+                          "type": "CHOICE",
                           "members": [
                             {
-                              "type": "REPEAT1",
-                              "content": {
-                                "type": "TOKEN",
-                                "content": {
-                                  "type": "STRING",
-                                  "value": ","
-                                }
-                              }
-                            },
-                            {
-                              "type": "SYMBOL",
-                              "name": "ellipsis_exprow"
-                            },
-                            {
-                              "type": "CHOICE",
+                              "type": "SEQ",
                               "members": [
                                 {
                                   "type": "REPEAT1",
@@ -471,14 +457,33 @@
                                   }
                                 },
                                 {
-                                  "type": "BLANK"
+                                  "type": "SYMBOL",
+                                  "name": "ellipsis_exprow"
                                 }
                               ]
+                            },
+                            {
+                              "type": "BLANK"
                             }
                           ]
                         },
                         {
-                          "type": "BLANK"
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "REPEAT1",
+                              "content": {
+                                "type": "TOKEN",
+                                "content": {
+                                  "type": "STRING",
+                                  "value": ","
+                                }
+                              }
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -790,27 +795,13 @@
                       }
                     },
                     {
-                      "type": "CHOICE",
+                      "type": "SEQ",
                       "members": [
                         {
-                          "type": "SEQ",
+                          "type": "CHOICE",
                           "members": [
                             {
-                              "type": "REPEAT1",
-                              "content": {
-                                "type": "TOKEN",
-                                "content": {
-                                  "type": "STRING",
-                                  "value": ","
-                                }
-                              }
-                            },
-                            {
-                              "type": "SYMBOL",
-                              "name": "ellipsis_listexp"
-                            },
-                            {
-                              "type": "CHOICE",
+                              "type": "SEQ",
                               "members": [
                                 {
                                   "type": "REPEAT1",
@@ -823,14 +814,33 @@
                                   }
                                 },
                                 {
-                                  "type": "BLANK"
+                                  "type": "SYMBOL",
+                                  "name": "ellipsis_listexp"
                                 }
                               ]
+                            },
+                            {
+                              "type": "BLANK"
                             }
                           ]
                         },
                         {
-                          "type": "BLANK"
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "REPEAT1",
+                              "content": {
+                                "type": "TOKEN",
+                                "content": {
+                                  "type": "STRING",
+                                  "value": ","
+                                }
+                              }
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2907,27 +2917,13 @@
                       }
                     },
                     {
-                      "type": "CHOICE",
+                      "type": "SEQ",
                       "members": [
                         {
-                          "type": "SEQ",
+                          "type": "CHOICE",
                           "members": [
                             {
-                              "type": "REPEAT1",
-                              "content": {
-                                "type": "TOKEN",
-                                "content": {
-                                  "type": "STRING",
-                                  "value": ","
-                                }
-                              }
-                            },
-                            {
-                              "type": "SYMBOL",
-                              "name": "ellipsis_patrow"
-                            },
-                            {
-                              "type": "CHOICE",
+                              "type": "SEQ",
                               "members": [
                                 {
                                   "type": "REPEAT1",
@@ -2940,14 +2936,33 @@
                                   }
                                 },
                                 {
-                                  "type": "BLANK"
+                                  "type": "SYMBOL",
+                                  "name": "ellipsis_patrow"
                                 }
                               ]
+                            },
+                            {
+                              "type": "BLANK"
                             }
                           ]
                         },
                         {
-                          "type": "BLANK"
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "REPEAT1",
+                              "content": {
+                                "type": "TOKEN",
+                                "content": {
+                                  "type": "STRING",
+                                  "value": ","
+                                }
+                              }
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3280,27 +3295,13 @@
                       }
                     },
                     {
-                      "type": "CHOICE",
+                      "type": "SEQ",
                       "members": [
                         {
-                          "type": "SEQ",
+                          "type": "CHOICE",
                           "members": [
                             {
-                              "type": "REPEAT1",
-                              "content": {
-                                "type": "TOKEN",
-                                "content": {
-                                  "type": "STRING",
-                                  "value": ","
-                                }
-                              }
-                            },
-                            {
-                              "type": "SYMBOL",
-                              "name": "ellipsis_listpat"
-                            },
-                            {
-                              "type": "CHOICE",
+                              "type": "SEQ",
                               "members": [
                                 {
                                   "type": "REPEAT1",
@@ -3313,14 +3314,33 @@
                                   }
                                 },
                                 {
-                                  "type": "BLANK"
+                                  "type": "SYMBOL",
+                                  "name": "ellipsis_listpat"
                                 }
                               ]
+                            },
+                            {
+                              "type": "BLANK"
                             }
                           ]
                         },
                         {
-                          "type": "BLANK"
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "REPEAT1",
+                              "content": {
+                                "type": "TOKEN",
+                                "content": {
+                                  "type": "STRING",
+                                  "value": ","
+                                }
+                              }
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3930,27 +3950,13 @@
                       }
                     },
                     {
-                      "type": "CHOICE",
+                      "type": "SEQ",
                       "members": [
                         {
-                          "type": "SEQ",
+                          "type": "CHOICE",
                           "members": [
                             {
-                              "type": "REPEAT1",
-                              "content": {
-                                "type": "TOKEN",
-                                "content": {
-                                  "type": "STRING",
-                                  "value": ","
-                                }
-                              }
-                            },
-                            {
-                              "type": "SYMBOL",
-                              "name": "ellipsis_tyrow"
-                            },
-                            {
-                              "type": "CHOICE",
+                              "type": "SEQ",
                               "members": [
                                 {
                                   "type": "REPEAT1",
@@ -3963,14 +3969,33 @@
                                   }
                                 },
                                 {
-                                  "type": "BLANK"
+                                  "type": "SYMBOL",
+                                  "name": "ellipsis_tyrow"
                                 }
                               ]
+                            },
+                            {
+                              "type": "BLANK"
                             }
                           ]
                         },
                         {
-                          "type": "BLANK"
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "REPEAT1",
+                              "content": {
+                                "type": "TOKEN",
+                                "content": {
+                                  "type": "STRING",
+                                  "value": ","
+                                }
+                              }
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         }
                       ]
                     }
