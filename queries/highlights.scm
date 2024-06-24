@@ -60,26 +60,8 @@
           (#match? @vid "^[A-Z].*"))) @constructor
 
 ;; "true", "false", "nil", "::", and "ref" are built-in constructors
-((vid) @constant.builtin
- (#match? @constant.builtin "true"))
-((vid) @constant.builtin
- (#match? @constant.builtin "false"))
-((vid) @constant.builtin
- (#match? @constant.builtin "nil"))
-((vid) @constant.builtin
- (#match? @constant.builtin "::"))
-((vid) @constant.builtin
- (#match? @constant.builtin "ref"))
-(longvid ((vid) @vid
-          (#match? @vid "true"))) @constant.builtin
-(longvid ((vid) @vid
-          (#match? @vid "false"))) @constant.builtin
-(longvid ((vid) @vid
-          (#match? @vid "nil"))) @constant.builtin
-(longvid ((vid) @vid
-           (#match? @vid "::"))) @constant.builtin
-(longvid ((vid) @vid
-          (#match? @vid "ref"))) @constant.builtin
+((vid) @vid (#any-of? @vid "true" "false" "nil" "::" "ref")) @constant.builtin
+(longvid ((vid) @vid (#any-of? @vid "true" "false" "nil" "::" "ref"))) @constant.builtin
 
 ;; *******************************************************************
 ;; Modules
