@@ -4,6 +4,8 @@
  * @license MIT
  */
 
+/* eslint-disable require-jsdoc */
+
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
@@ -78,7 +80,7 @@ const alphaNumericIdentSuffixRE = /[A-Za-z0-9_']*/.source;
 const alphaAlphaNumericIdentRE = `[A-Za-z]${alphaNumericIdentSuffixRE}`;
 const primeAlphaNumericIdentRE = `'${alphaNumericIdentSuffixRE}`;
 const symbolicIdentRE = /[!%&$#+\-/:<=>?@\\~`^|*]+/.source;
-const identRE = `(?:${alphaAlphaNumericIdentRE})|(?:${primeAlphaNumericIdentRE})|(?:${symbolicIdentRE})`;
+// const identRE = `(?:${alphaAlphaNumericIdentRE})|(?:${primeAlphaNumericIdentRE})|(?:${symbolicIdentRE})`;
 
 // ******************************************************** //
 // "Separated By"
@@ -180,9 +182,9 @@ function mkSepByCntFstLst(sep, elt, cnt, fst, lst) {
   };
 }
 
-function mkSepByCnt(sep, elt, cnt) {
-  return mkSepByCntFstLst(sep, elt, cnt, false, false);
-}
+// function mkSepByCnt(sep, elt, cnt) {
+//   return mkSepByCntFstLst(sep, elt, cnt, false, false);
+// }
 
 function mkSepBy(sep, elt, cnt) {
   return mkSepByCntFstLst(sep, elt, 0, false, false);
