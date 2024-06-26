@@ -10,15 +10,15 @@ void * tree_sitter_sml_external_scanner_create() {
   return NULL;
 }
 
-void tree_sitter_sml_external_scanner_destroy(void *payload) {
+void tree_sitter_sml_external_scanner_destroy(__attribute__ ((unused)) void *payload) {
   return;
 }
 
-unsigned tree_sitter_sml_external_scanner_serialize(void *payload, char *buffer) {
+unsigned tree_sitter_sml_external_scanner_serialize(__attribute__ ((unused)) void *payload, __attribute__ ((unused)) char *buffer) {
   return 0;
 }
 
-void tree_sitter_sml_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+void tree_sitter_sml_external_scanner_deserialize(__attribute__ ((unused)) void *payload, __attribute__ ((unused)) const char *buffer, __attribute__ ((unused)) unsigned length) {
   return;
 }
 
@@ -125,7 +125,7 @@ bool tree_sitter_sml_external_scanner_scan_comment(TSLexer *lexer, bool block_co
   }
 }
 
-bool tree_sitter_sml_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+bool tree_sitter_sml_external_scanner_scan(__attribute__ ((unused)) void *payload, TSLexer *lexer, const bool *valid_symbols) {
   if (valid_symbols[BLOCK_COMMENT] || valid_symbols[LINE_COMMENT]) {
     return tree_sitter_sml_external_scanner_scan_comment(lexer, valid_symbols[BLOCK_COMMENT], valid_symbols[LINE_COMMENT]);
   } else {
