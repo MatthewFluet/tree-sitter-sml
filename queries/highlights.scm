@@ -19,6 +19,24 @@
  "structure" "where"
 ] @keyword
 
+;; Because tree-sitter uses context-sensitive scanning, a reserved word can be
+;; parsed as an identifier if that reserved word cannot occur in a particular
+;; context; for example, `val x = struct` is parsed as a valbind with `struct`
+;; parsed as a vid.  Highlight such misinterpreted identifiers.
+([(vid) (tycon) (strid) (sigid) (fctid)] @id
+ (#any-of? @id
+           ;; Reserved Words Core
+           "abstype" "and" "andalso" "as" "case" "datatype" "do" "else" "end"
+           "exception" "fn" "fun" "handle" "if" "in" "infix" "infixr" "let"
+           "local" "nonfix" "of" "op" "open" "orelse" "raise" "rec" "then"
+           "type" "val" "with" "withtype" "while"
+           ;; Reserved Words Modules
+           "eqtype" "functor" "include" "sharing" "sig" "signature" "struct"
+           "structure" "where")) @error
+
+;; As an additional special case, The Defn of SML excludes `*` from tycon.
+([(tycon)] @id (#eq? @id "*")) @error
+
 ;; *******************************************************************
 ;; Punctuation
 ;; *******************************************************************
