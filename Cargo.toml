@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-sml"
 description = "Standard ML (SML) grammar for tree-sitter"
-version = "0.2.0"
+version = "0.22.0"
 author = "Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)"
 license = "MIT"
 readme = "README.md"

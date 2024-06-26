@@ -1,4 +1,4 @@
-VERSION := 0.2.0
+VERSION := 0.22.0
 
 LANGUAGE_NAME := tree-sitter-sml
 
