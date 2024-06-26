@@ -371,21 +371,21 @@ module.exports = grammar({
         ),
 
         app_exp: $ => prec(10, seq($._atexp, repeat1($._atexp))),
-        typed_exp: $ => prec(09, seq($._exp, ":", $._ty)),
-        conj_exp: $ => prec.left(08, seq($._exp, "andalso", $._exp)),
-        disj_exp: $ => prec.left(07, seq($._exp, "orelse", $._exp)),
-        handle_exp: $ => prec(06, seq($._exp, "handle", $._match)),
-        raise_exp: $ => prec(05, seq("raise", $._exp)),
-        cond_exp: $ => prec.right(04, seq(
+        typed_exp: $ => prec(9, seq($._exp, ":", $._ty)),
+        conj_exp: $ => prec.left(8, seq($._exp, "andalso", $._exp)),
+        disj_exp: $ => prec.left(7, seq($._exp, "orelse", $._exp)),
+        handle_exp: $ => prec(6, seq($._exp, "handle", $._match)),
+        raise_exp: $ => prec(5, seq("raise", $._exp)),
+        cond_exp: $ => prec.right(4, seq(
             "if", $._exp,
             "then", $._exp,
             ifExtElse('optElse',
                       optional(seq("else", $._exp)),
                       seq("else", $._exp))
         )),
-        iter_exp: $ => prec(03, seq("while", $._exp, "do", $._exp)),
-        case_exp: $ => prec(02, seq("case", $._exp, "of", $._match)),
-        fn_exp: $ => prec(01, seq("fn", $._match)),
+        iter_exp: $ => prec(3, seq("while", $._exp, "do", $._exp)),
+        case_exp: $ => prec(2, seq("case", $._exp, "of", $._match)),
+        fn_exp: $ => prec(1, seq("fn", $._match)),
 
         _match: $ => prec.right(seq(optBar, mkSepBy1("|", $.mrule))),
         mrule: $ => seq($._pat, "=>", $._exp),
@@ -573,11 +573,11 @@ module.exports = grammar({
             ifExtAlt(['orPat', 'disjPat'], $.disj_pat),
         ),
 
-        app_pat: $ => prec(04, seq($._atpat, repeat1($._atpat))),
-        typed_pat: $ => prec(03, seq($._pat, ":", $._ty)),
-        as_pat: $ => prec.right(02, seq(optional("op"), $.vid, optional(seq(":", $._ty)), "as", $._pat)),
-        conj_pat: $ => prec.right(02, seq($._pat, "as", $._pat)),
-        disj_pat: $ => prec.left(01, seq($._pat, "|", $._pat)),
+        app_pat: $ => prec(4, seq($._atpat, repeat1($._atpat))),
+        typed_pat: $ => prec(3, seq($._pat, ":", $._ty)),
+        as_pat: $ => prec.right(2, seq(optional("op"), $.vid, optional(seq(":", $._ty)), "as", $._pat)),
+        conj_pat: $ => prec.right(2, seq($._pat, "as", $._pat)),
+        disj_pat: $ => prec.left(1, seq($._pat, "|", $._pat)),
 
         // ******************************************************** //
         // Type expressions (Core)
