@@ -230,13 +230,9 @@ module.exports = grammar({
 
     supertypes: $ => [
         $._scon,
-        $._atexp,
         $._exp,
         $._dec,
-        $._dec_no_local,
-        $._atpat,
         $._pat,
-        $._atty,
         $._ty,
         $._strexp,
         $._strdec,

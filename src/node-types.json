@@ -1,130 +1,6 @@
 [
   {
-    "type": "_atexp",
-    "named": true,
-    "subtypes": [
-      {
-        "type": "let_exp",
-        "named": true
-      },
-      {
-        "type": "list_exp",
-        "named": true
-      },
-      {
-        "type": "paren_exp",
-        "named": true
-      },
-      {
-        "type": "record_exp",
-        "named": true
-      },
-      {
-        "type": "recordsel_exp",
-        "named": true
-      },
-      {
-        "type": "scon_exp",
-        "named": true
-      },
-      {
-        "type": "sequence_exp",
-        "named": true
-      },
-      {
-        "type": "tuple_exp",
-        "named": true
-      },
-      {
-        "type": "unit_exp",
-        "named": true
-      },
-      {
-        "type": "vec_exp",
-        "named": true
-      },
-      {
-        "type": "vid_exp",
-        "named": true
-      }
-    ]
-  },
-  {
-    "type": "_atpat",
-    "named": true,
-    "subtypes": [
-      {
-        "type": "list_pat",
-        "named": true
-      },
-      {
-        "type": "paren_pat",
-        "named": true
-      },
-      {
-        "type": "record_pat",
-        "named": true
-      },
-      {
-        "type": "scon_pat",
-        "named": true
-      },
-      {
-        "type": "tuple_pat",
-        "named": true
-      },
-      {
-        "type": "unit_pat",
-        "named": true
-      },
-      {
-        "type": "vec_pat",
-        "named": true
-      },
-      {
-        "type": "vid_pat",
-        "named": true
-      },
-      {
-        "type": "wildcard_pat",
-        "named": true
-      }
-    ]
-  },
-  {
-    "type": "_atty",
-    "named": true,
-    "subtypes": [
-      {
-        "type": "record_ty",
-        "named": true
-      },
-      {
-        "type": "tycon_ty",
-        "named": true
-      },
-      {
-        "type": "tyvar_ty",
-        "named": true
-      }
-    ]
-  },
-  {
     "type": "_dec",
-    "named": true,
-    "subtypes": [
-      {
-        "type": "_dec_no_local",
-        "named": true
-      },
-      {
-        "type": "local_dec",
-        "named": true
-      }
-    ]
-  },
-  {
-    "type": "_dec_no_local",
     "named": true,
     "subtypes": [
       {
@@ -160,6 +36,10 @@
         "named": true
       },
       {
+        "type": "local_dec",
+        "named": true
+      },
+      {
         "type": "nonfix_dec",
         "named": true
       },
@@ -181,10 +61,6 @@
     "type": "_exp",
     "named": true,
     "subtypes": [
-      {
-        "type": "_atexp",
-        "named": true
-      },
       {
         "type": "app_exp",
         "named": true
@@ -218,11 +94,55 @@
         "named": true
       },
       {
+        "type": "let_exp",
+        "named": true
+      },
+      {
+        "type": "list_exp",
+        "named": true
+      },
+      {
+        "type": "paren_exp",
+        "named": true
+      },
+      {
         "type": "raise_exp",
         "named": true
       },
       {
+        "type": "record_exp",
+        "named": true
+      },
+      {
+        "type": "recordsel_exp",
+        "named": true
+      },
+      {
+        "type": "scon_exp",
+        "named": true
+      },
+      {
+        "type": "sequence_exp",
+        "named": true
+      },
+      {
+        "type": "tuple_exp",
+        "named": true
+      },
+      {
         "type": "typed_exp",
+        "named": true
+      },
+      {
+        "type": "unit_exp",
+        "named": true
+      },
+      {
+        "type": "vec_exp",
+        "named": true
+      },
+      {
+        "type": "vid_exp",
         "named": true
       }
     ]
@@ -242,10 +162,6 @@
     "named": true,
     "subtypes": [
       {
-        "type": "_atpat",
-        "named": true
-      },
-      {
         "type": "app_pat",
         "named": true
       },
@@ -258,7 +174,43 @@
         "named": true
       },
       {
+        "type": "list_pat",
+        "named": true
+      },
+      {
+        "type": "paren_pat",
+        "named": true
+      },
+      {
+        "type": "record_pat",
+        "named": true
+      },
+      {
+        "type": "scon_pat",
+        "named": true
+      },
+      {
+        "type": "tuple_pat",
+        "named": true
+      },
+      {
         "type": "typed_pat",
+        "named": true
+      },
+      {
+        "type": "unit_pat",
+        "named": true
+      },
+      {
+        "type": "vec_pat",
+        "named": true
+      },
+      {
+        "type": "vid_pat",
+        "named": true
+      },
+      {
+        "type": "wildcard_pat",
         "named": true
       }
     ]
@@ -368,7 +320,35 @@
     "named": true,
     "subtypes": [
       {
-        "type": "_dec_no_local",
+        "type": "abstype_dec",
+        "named": true
+      },
+      {
+        "type": "datarepl_dec",
+        "named": true
+      },
+      {
+        "type": "datatype_dec",
+        "named": true
+      },
+      {
+        "type": "do_dec",
+        "named": true
+      },
+      {
+        "type": "exception_dec",
+        "named": true
+      },
+      {
+        "type": "fun_dec",
+        "named": true
+      },
+      {
+        "type": "infix_dec",
+        "named": true
+      },
+      {
+        "type": "infixr_dec",
         "named": true
       },
       {
@@ -376,7 +356,23 @@
         "named": true
       },
       {
+        "type": "nonfix_dec",
+        "named": true
+      },
+      {
+        "type": "open_dec",
+        "named": true
+      },
+      {
         "type": "structure_strdec",
+        "named": true
+      },
+      {
+        "type": "type_dec",
+        "named": true
+      },
+      {
+        "type": "val_dec",
         "named": true
       }
     ]
@@ -430,10 +426,6 @@
     "named": true,
     "subtypes": [
       {
-        "type": "_atty",
-        "named": true
-      },
-      {
         "type": "fn_ty",
         "named": true
       },
@@ -442,7 +434,19 @@
         "named": true
       },
       {
+        "type": "record_ty",
+        "named": true
+      },
+      {
         "type": "tuple_ty",
+        "named": true
+      },
+      {
+        "type": "tycon_ty",
+        "named": true
+      },
+      {
+        "type": "tyvar_ty",
         "named": true
       }
     ]
@@ -504,7 +508,47 @@
       "required": true,
       "types": [
         {
-          "type": "_atexp",
+          "type": "let_exp",
+          "named": true
+        },
+        {
+          "type": "list_exp",
+          "named": true
+        },
+        {
+          "type": "paren_exp",
+          "named": true
+        },
+        {
+          "type": "record_exp",
+          "named": true
+        },
+        {
+          "type": "recordsel_exp",
+          "named": true
+        },
+        {
+          "type": "scon_exp",
+          "named": true
+        },
+        {
+          "type": "sequence_exp",
+          "named": true
+        },
+        {
+          "type": "tuple_exp",
+          "named": true
+        },
+        {
+          "type": "unit_exp",
+          "named": true
+        },
+        {
+          "type": "vec_exp",
+          "named": true
+        },
+        {
+          "type": "vid_exp",
           "named": true
         }
       ]
@@ -519,7 +563,39 @@
       "required": true,
       "types": [
         {
-          "type": "_atpat",
+          "type": "list_pat",
+          "named": true
+        },
+        {
+          "type": "paren_pat",
+          "named": true
+        },
+        {
+          "type": "record_pat",
+          "named": true
+        },
+        {
+          "type": "scon_pat",
+          "named": true
+        },
+        {
+          "type": "tuple_pat",
+          "named": true
+        },
+        {
+          "type": "unit_pat",
+          "named": true
+        },
+        {
+          "type": "vec_pat",
+          "named": true
+        },
+        {
+          "type": "vid_pat",
+          "named": true
+        },
+        {
+          "type": "wildcard_pat",
           "named": true
         }
       ]
@@ -1172,7 +1248,39 @@
         "required": false,
         "types": [
           {
-            "type": "_atpat",
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
             "named": true
           }
         ]
@@ -1182,7 +1290,39 @@
         "required": false,
         "types": [
           {
-            "type": "_atpat",
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
             "named": true
           }
         ]
@@ -1192,7 +1332,39 @@
         "required": false,
         "types": [
           {
-            "type": "_atpat",
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
             "named": true
           }
         ]
@@ -1253,10 +1425,6 @@
       "required": true,
       "types": [
         {
-          "type": "_atty",
-          "named": true
-        },
-        {
           "type": "fn_ty",
           "named": true
         },
@@ -1265,7 +1433,19 @@
           "named": true
         },
         {
+          "type": "record_ty",
+          "named": true
+        },
+        {
           "type": "tuple_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
           "named": true
         }
       ]
@@ -2181,11 +2361,19 @@
       "required": true,
       "types": [
         {
-          "type": "_atty",
+          "type": "paren_ty",
           "named": true
         },
         {
-          "type": "paren_ty",
+          "type": "record_ty",
+          "named": true
+        },
+        {
+          "type": "tycon_ty",
+          "named": true
+        },
+        {
+          "type": "tyvar_ty",
           "named": true
         }
       ]
