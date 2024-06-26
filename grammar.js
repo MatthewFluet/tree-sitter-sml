@@ -1,3 +1,9 @@
+/**
+ * @file Standard ML (SML) grammar for tree-sitter
+ * @author Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)
+ * @license MIT
+ */
+
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
