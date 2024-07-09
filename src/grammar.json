@@ -1382,16 +1382,24 @@
             "value": "if"
           },
           {
-            "type": "SYMBOL",
-            "name": "_exp"
+            "type": "FIELD",
+            "name": "if",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_exp"
+            }
           },
           {
             "type": "STRING",
             "value": "then"
           },
           {
-            "type": "SYMBOL",
-            "name": "_exp"
+            "type": "FIELD",
+            "name": "then",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_exp"
+            }
           },
           {
             "type": "CHOICE",
@@ -1404,8 +1412,12 @@
                     "value": "else"
                   },
                   {
-                    "type": "SYMBOL",
-                    "name": "_exp"
+                    "type": "FIELD",
+                    "name": "else",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_exp"
+                    }
                   }
                 ]
               },
