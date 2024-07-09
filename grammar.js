@@ -396,7 +396,7 @@ module.exports = grammar({
     fn_exp: $ => prec(1, seq('fn', $._match)),
 
     _match: $ => prec.right(seq(optBar, mkSepBy1('|', $.mrule))),
-    mrule: $ => seq($._pat, '=>', $._exp),
+    mrule: $ => seq(field('pat', $._pat), '=>', field('exp', $._exp)),
 
     // ******************************************************** //
     // Declarations and Bindings (Core)

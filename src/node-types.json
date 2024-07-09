@@ -1908,20 +1908,27 @@
   {
     "type": "mrule",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_exp",
-          "named": true
-        },
-        {
-          "type": "_pat",
-          "named": true
-        }
-      ]
+    "fields": {
+      "exp": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_exp",
+            "named": true
+          }
+        ]
+      },
+      "pat": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_pat",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {

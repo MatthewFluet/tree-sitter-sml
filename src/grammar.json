@@ -1548,16 +1548,24 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_pat"
+          "type": "FIELD",
+          "name": "pat",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_pat"
+          }
         },
         {
           "type": "STRING",
           "value": "=>"
         },
         {
-          "type": "SYMBOL",
-          "name": "_exp"
+          "type": "FIELD",
+          "name": "exp",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_exp"
+          }
         }
       ]
     },
