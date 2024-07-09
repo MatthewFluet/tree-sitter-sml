@@ -45,6 +45,7 @@
     "build-wasm": "tree-sitter build --wasm",
     "install": "node-gyp-build",
     "lint": "eslint grammar.js",
+    "lint-fix": "eslint --fix grammar.js",
     "parse": "tree-sitter parse",
     "prebuildify": "prebuildify --napi --strip",
     "test": "tree-sitter test"
