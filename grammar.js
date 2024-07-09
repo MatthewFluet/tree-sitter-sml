@@ -431,7 +431,7 @@ module.exports = grammar({
       $._valbind,
     ),
     _valbind: $ => mkSepBy1('and', $.valbind),
-    valbind: $ => seq($._pat, '=', $._exp),
+    valbind: $ => seq($._pat, '=', field('def', $._exp)),
 
     fun_dec: $ => seq(
       'fun',
@@ -449,7 +449,7 @@ module.exports = grammar({
       ),
       optional(seq(':', $._ty)),
       '=',
-      field('body', $._exp),
+      field('def', $._exp),
     ),
 
     type_dec: $ => seq('type', $._typbind),
@@ -471,7 +471,7 @@ module.exports = grammar({
       field('tyvars', optional($.tyvarseq)),
       field('name', $.tycon),
       '=',
-      $._conbind,
+      field('def', $._conbind),
     ),
     _conbind: $ => seq(optBar, mkSepBy1('|', $.conbind)),
     conbind: $ => seq(
@@ -664,9 +664,9 @@ module.exports = grammar({
     ),
     let_strexp: $ => seq(
       'let',
-      repeat(choice(';', $._strdec)),
+      field('decs', repeat(choice(';', $._strdec))),
       'in',
-      $._strexp,
+      field('body', $._strexp),
       'end',
     ),
 
@@ -682,14 +682,14 @@ module.exports = grammar({
       field('name', $.strid),
       optional(seq(choice(':', ':>'), $._sigexp)),
       '=',
-      $._strexp,
+      field('def', $._strexp),
     ),
 
     local_strdec: $ => seq(
       'local',
-      repeat(choice(';', $._strdec)),
+      field('decs', repeat(choice(';', $._strdec))),
       'in',
-      repeat(choice(';', $._strdec)),
+      field('body', repeat(choice(';', $._strdec))),
       'end',
     ),
 
@@ -729,7 +729,7 @@ module.exports = grammar({
     sigbind: $ => seq(
       field('name', $.sigid),
       '=',
-      $._sigexp,
+      field('def', $._sigexp),
     ),
 
     // ******************************************************** //
@@ -751,13 +751,13 @@ module.exports = grammar({
 
     val_spec: $ => seq('val', $._valdesc),
     _valdesc: $ => mkSepBy1('and', $.valdesc),
-    valdesc: $ => seq($.vid, ':', $._ty),
+    valdesc: $ => seq(field('name', $.vid), ':', field('ty', $._ty)),
 
     type_spec: $ => seq('type', choice($._typedesc, $._typbind)),
     _typedesc: $ => mkSepBy1('and', $.typedesc),
     typedesc: $ => seq(
-      optional($.tyvarseq),
-      $.tycon,
+      field('tyvars', optional($.tyvarseq)),
+      field('name', $.tycon),
     ),
 
     eqtype_spec: $ => seq('eqtype', $._typedesc),
@@ -770,9 +770,9 @@ module.exports = grammar({
     _datdesc: $ => mkSepBy1('and', $.datdesc),
     datdesc: $ => seq(
       optional($.tyvarseq),
-      $.tycon,
+      field('name', $.tycon),
       '=',
-      $._condesc,
+      field('def', $._condesc),
     ),
     _condesc: $ => seq(optBar, mkSepBy1('|', $.condesc)),
     condesc: $ => seq(
@@ -797,7 +797,7 @@ module.exports = grammar({
 
     structure_spec: $ => seq('structure', $._strdesc),
     _strdesc: $ => mkSepBy1('and', $.strdesc),
-    strdesc: $ => seq($.strid, ':', $._sigexp),
+    strdesc: $ => seq(field('name', $.strid), ':', field('sig', $._sigexp)),
 
     include_spec: $ => seq('include', choice($._sigexp, seq($.sigid, repeat1($.sigid)))),
 
@@ -817,14 +817,17 @@ module.exports = grammar({
     fctbind: $ => seq(
       field('name', $.fctid),
       '(',
-      choice(
-        seq($.strid, ':', $._sigexp),
-        repeat(choice(';', $._spec)),
+      field('arg',
+        choice(
+          seq($.strid, ':', $._sigexp),
+          repeat(choice(';', $._spec)),
+        ),
       ),
       ')',
       optional(seq(choice(':', ':>'), $._sigexp)),
       '=',
-      $._strexp),
+      field('def', $._strexp),
+    ),
 
     // ******************************************************** //
     // Topdecs

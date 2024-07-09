@@ -864,6 +864,20 @@
     "type": "datbind",
     "named": true,
     "fields": {
+      "def": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "conbind",
+            "named": true
+          },
+          {
+            "type": "|",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -884,34 +898,41 @@
           }
         ]
       }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "conbind",
-          "named": true
-        }
-      ]
     }
   },
   {
     "type": "datdesc",
     "named": true,
-    "fields": {},
+    "fields": {
+      "def": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "condesc",
+            "named": true
+          },
+          {
+            "type": "|",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tycon",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
-        {
-          "type": "condesc",
-          "named": true
-        },
-        {
-          "type": "tycon",
-          "named": true
-        },
         {
           "type": "tyvarseq",
           "named": true
@@ -1200,6 +1221,42 @@
     "type": "fctbind",
     "named": true,
     "fields": {
+      "arg": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ":",
+            "named": false
+          },
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "_sigexp",
+            "named": true
+          },
+          {
+            "type": "_spec",
+            "named": true
+          },
+          {
+            "type": "strid",
+            "named": true
+          }
+        ]
+      },
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_strexp",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -1212,23 +1269,11 @@
       }
     },
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
         {
           "type": "_sigexp",
-          "named": true
-        },
-        {
-          "type": "_spec",
-          "named": true
-        },
-        {
-          "type": "_strexp",
-          "named": true
-        },
-        {
-          "type": "strid",
           "named": true
         }
       ]
@@ -1369,7 +1414,7 @@
           }
         ]
       },
-      "body": {
+      "def": {
         "multiple": false,
         "required": true,
         "types": [
@@ -1674,20 +1719,31 @@
   {
     "type": "let_strexp",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_strdec",
-          "named": true
-        },
-        {
-          "type": "_strexp",
-          "named": true
-        }
-      ]
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_strexp",
+            "named": true
+          }
+        ]
+      },
+      "decs": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "_strdec",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1765,16 +1821,35 @@
   {
     "type": "local_strdec",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "_strdec",
-          "named": true
-        }
-      ]
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "_strdec",
+            "named": true
+          }
+        ]
+      },
+      "decs": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "_strdec",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2132,6 +2207,16 @@
     "type": "sigbind",
     "named": true,
     "fields": {
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_sigexp",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -2142,16 +2227,6 @@
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "_sigexp",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -2212,6 +2287,16 @@
     "type": "strbind",
     "named": true,
     "fields": {
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_strexp",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
@@ -2224,15 +2309,11 @@
       }
     },
     "children": {
-      "multiple": true,
-      "required": true,
+      "multiple": false,
+      "required": false,
       "types": [
         {
           "type": "_sigexp",
-          "named": true
-        },
-        {
-          "type": "_strexp",
           "named": true
         }
       ]
@@ -2241,20 +2322,27 @@
   {
     "type": "strdesc",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_sigexp",
-          "named": true
-        },
-        {
-          "type": "strid",
-          "named": true
-        }
-      ]
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "strid",
+            "named": true
+          }
+        ]
+      },
+      "sig": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_sigexp",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2514,20 +2602,27 @@
   {
     "type": "typedesc",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "tycon",
-          "named": true
-        },
-        {
-          "type": "tyvarseq",
-          "named": true
-        }
-      ]
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "tycon",
+            "named": true
+          }
+        ]
+      },
+      "tyvars": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "tyvarseq",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2653,15 +2748,22 @@
   {
     "type": "valbind",
     "named": true,
-    "fields": {},
+    "fields": {
+      "def": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_exp",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "_exp",
-          "named": true
-        },
         {
           "type": "_pat",
           "named": true
@@ -2672,20 +2774,27 @@
   {
     "type": "valdesc",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_ty",
-          "named": true
-        },
-        {
-          "type": "vid",
-          "named": true
-        }
-      ]
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "vid",
+            "named": true
+          }
+        ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_ty",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
