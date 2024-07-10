@@ -1199,20 +1199,27 @@
   {
     "type": "exprow",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_exp",
-          "named": true
-        },
-        {
-          "type": "lab",
-          "named": true
-        }
-      ]
+    "fields": {
+      "exp": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_exp",
+            "named": true
+          }
+        ]
+      },
+      "lab": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lab",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2030,20 +2037,27 @@
   {
     "type": "patrow",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_pat",
-          "named": true
-        },
-        {
-          "type": "lab",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lab": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lab",
+            "named": true
+          }
+        ]
+      },
+      "pat": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_pat",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2656,20 +2670,27 @@
   {
     "type": "tyrow",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_ty",
-          "named": true
-        },
-        {
-          "type": "lab",
-          "named": true
-        }
-      ]
+    "fields": {
+      "lab": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lab",
+            "named": true
+          }
+        ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_ty",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {

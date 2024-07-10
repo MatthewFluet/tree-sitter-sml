@@ -516,16 +516,24 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "lab"
+          "type": "FIELD",
+          "name": "lab",
+          "content": {
+            "type": "SYMBOL",
+            "name": "lab"
+          }
         },
         {
           "type": "STRING",
           "value": "="
         },
         {
-          "type": "SYMBOL",
-          "name": "_exp"
+          "type": "FIELD",
+          "name": "exp",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_exp"
+          }
         }
       ]
     },
@@ -3023,16 +3031,24 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "lab"
+          "type": "FIELD",
+          "name": "lab",
+          "content": {
+            "type": "SYMBOL",
+            "name": "lab"
+          }
         },
         {
           "type": "STRING",
           "value": "="
         },
         {
-          "type": "SYMBOL",
-          "name": "_pat"
+          "type": "FIELD",
+          "name": "pat",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_pat"
+          }
         }
       ]
     },
@@ -4043,16 +4059,24 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "lab"
+          "type": "FIELD",
+          "name": "lab",
+          "content": {
+            "type": "SYMBOL",
+            "name": "lab"
+          }
         },
         {
           "type": "STRING",
           "value": ":"
         },
         {
-          "type": "SYMBOL",
-          "name": "_ty"
+          "type": "FIELD",
+          "name": "ty",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_ty"
+          }
         }
       ]
     },

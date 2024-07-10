@@ -337,7 +337,7 @@ module.exports = grammar({
       $.exprow,
       ifExtAlt('recordExpPun', $.labvar_exprow),
     ),
-    exprow: $ => seq($.lab, '=', $._exp),
+    exprow: $ => seq(field('lab', $.lab), '=', field('exp', $._exp)),
     labvar_exprow: $ => seq($.vid, optional(seq(':', $._ty))),
     ellipsis_exprow: $ => seq('...', '=', $._exp),
     recordsel_exp: $ => seq('#', $.lab),
@@ -552,7 +552,7 @@ module.exports = grammar({
       '}',
     ),
     _patrow: $ => choice($.patrow, $.labvar_patrow),
-    patrow: $ => seq($.lab, '=', $._pat),
+    patrow: $ => seq(field('lab', $.lab), '=', field('pat', $._pat)),
     labvar_patrow: $ => seq(
       $.vid,
       optional(seq(':', $._ty)),
@@ -618,7 +618,7 @@ module.exports = grammar({
       ifExtElse('recordExt', {elt: $.ellipsis_tyrow, rqd: false}, false),
       '}',
     ),
-    tyrow: $ => seq($.lab, ':', $._ty),
+    tyrow: $ => seq(field('lab', $.lab), ':', field('ty', $._ty)),
     ellipsis_tyrow: $ => seq('...', ':', $._ty),
     tycon_ty: $ => seq(
       optional($.tyseq),
