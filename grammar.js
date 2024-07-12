@@ -447,7 +447,7 @@ module.exports = grammar({
         prec(2, seq('(', field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat), ')', field('args', repeat($._atpat)))),
         prec(0, seq(field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat))),
       ),
-      optional(seq(':', $._ty)),
+      optional(seq(':', field('ty', $._ty))),
       '=',
       field('def', $._exp),
     ),

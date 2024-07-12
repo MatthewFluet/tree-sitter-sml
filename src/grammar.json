@@ -2043,8 +2043,12 @@
                   "value": ":"
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "_ty"
+                  "type": "FIELD",
+                  "name": "ty",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_ty"
+                  }
                 }
               ]
             },

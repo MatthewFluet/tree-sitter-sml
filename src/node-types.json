@@ -1461,17 +1461,17 @@
             "named": true
           }
         ]
+      },
+      "ty": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_ty",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "_ty",
-          "named": true
-        }
-      ]
     }
   },
   {
