@@ -1448,16 +1448,24 @@
             "value": "while"
           },
           {
-            "type": "SYMBOL",
-            "name": "_exp"
+            "type": "FIELD",
+            "name": "while",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_exp"
+            }
           },
           {
             "type": "STRING",
             "value": "do"
           },
           {
-            "type": "SYMBOL",
-            "name": "_exp"
+            "type": "FIELD",
+            "name": "do",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_exp"
+            }
           }
         ]
       }

@@ -391,7 +391,7 @@ module.exports = grammar({
         optional(seq('else', field('else', $._exp))),
         seq('else', field('else', $._exp))),
     )),
-    iter_exp: $ => prec(3, seq('while', $._exp, 'do', $._exp)),
+    iter_exp: $ => prec(3, seq('while', field('while', $._exp), 'do', field('do', $._exp))),
     case_exp: $ => prec(2, seq('case', $._exp, 'of', $._match)),
     fn_exp: $ => prec(1, seq('fn', $._match)),
 
