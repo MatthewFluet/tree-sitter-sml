@@ -385,13 +385,13 @@ module.exports = grammar({
     handle_exp: $ => prec(6, seq($._exp, 'handle', $._match)),
     raise_exp: $ => prec(5, seq('raise', $._exp)),
     cond_exp: $ => prec.right(4, seq(
-      'if', field('if', $._exp),
-      'then', field('then', $._exp),
+      'if', field('if_exp', $._exp),
+      'then', field('then_exp', $._exp),
       ifExtElse('optElse',
-        optional(seq('else', field('else', $._exp))),
-        seq('else', field('else', $._exp))),
+        optional(seq('else', field('else_exp', $._exp))),
+        seq('else', field('else_exp', $._exp))),
     )),
-    iter_exp: $ => prec(3, seq('while', field('while', $._exp), 'do', field('do', $._exp))),
+    iter_exp: $ => prec(3, seq('while', field('while_exp', $._exp), 'do', field('do_exp', $._exp))),
     case_exp: $ => prec(2, seq('case', $._exp, 'of', $._match)),
     fn_exp: $ => prec(1, seq('fn', $._match)),
 

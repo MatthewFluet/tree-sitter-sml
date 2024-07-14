@@ -654,7 +654,7 @@
     "type": "cond_exp",
     "named": true,
     "fields": {
-      "else": {
+      "else_exp": {
         "multiple": false,
         "required": false,
         "types": [
@@ -664,7 +664,7 @@
           }
         ]
       },
-      "if": {
+      "if_exp": {
         "multiple": false,
         "required": true,
         "types": [
@@ -674,7 +674,7 @@
           }
         ]
       },
-      "then": {
+      "then_exp": {
         "multiple": false,
         "required": true,
         "types": [
@@ -1652,7 +1652,7 @@
     "type": "iter_exp",
     "named": true,
     "fields": {
-      "do": {
+      "do_exp": {
         "multiple": false,
         "required": true,
         "types": [
@@ -1662,7 +1662,7 @@
           }
         ]
       },
-      "while": {
+      "while_exp": {
         "multiple": false,
         "required": true,
         "types": [

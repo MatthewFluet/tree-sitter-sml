@@ -1391,7 +1391,7 @@
           },
           {
             "type": "FIELD",
-            "name": "if",
+            "name": "if_exp",
             "content": {
               "type": "SYMBOL",
               "name": "_exp"
@@ -1403,7 +1403,7 @@
           },
           {
             "type": "FIELD",
-            "name": "then",
+            "name": "then_exp",
             "content": {
               "type": "SYMBOL",
               "name": "_exp"
@@ -1421,7 +1421,7 @@
                   },
                   {
                     "type": "FIELD",
-                    "name": "else",
+                    "name": "else_exp",
                     "content": {
                       "type": "SYMBOL",
                       "name": "_exp"
@@ -1449,7 +1449,7 @@
           },
           {
             "type": "FIELD",
-            "name": "while",
+            "name": "while_exp",
             "content": {
               "type": "SYMBOL",
               "name": "_exp"
@@ -1461,7 +1461,7 @@
           },
           {
             "type": "FIELD",
-            "name": "do",
+            "name": "do_exp",
             "content": {
               "type": "SYMBOL",
               "name": "_exp"
