@@ -1294,17 +1294,17 @@
             "named": true
           }
         ]
+      },
+      "sig": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_sigexp",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "_sigexp",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -2359,17 +2359,17 @@
             "named": true
           }
         ]
+      },
+      "sig": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_sigexp",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "_sigexp",
-          "named": true
-        }
-      ]
     }
   },
   {

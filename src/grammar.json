@@ -4450,8 +4450,12 @@
                   ]
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "_sigexp"
+                  "type": "FIELD",
+                  "name": "sig",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_sigexp"
+                  }
                 }
               ]
             },
@@ -5682,8 +5686,12 @@
                   ]
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "_sigexp"
+                  "type": "FIELD",
+                  "name": "sig",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_sigexp"
+                  }
                 }
               ]
             },

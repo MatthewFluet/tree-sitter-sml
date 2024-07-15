@@ -680,7 +680,7 @@ module.exports = grammar({
     _strbind: $ => mkSepBy1('and', $.strbind),
     strbind: $ => seq(
       field('name', $.strid),
-      optional(seq(choice(':', ':>'), $._sigexp)),
+      optional(seq(choice(':', ':>'), field('sig', $._sigexp))),
       '=',
       field('def', $._strexp),
     ),
@@ -824,7 +824,7 @@ module.exports = grammar({
         ),
       ),
       ')',
-      optional(seq(choice(':', ':>'), $._sigexp)),
+      optional(seq(choice(':', ':>'), field('sig', $._sigexp))),
       '=',
       field('def', $._strexp),
     ),
