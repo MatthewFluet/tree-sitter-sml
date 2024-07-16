@@ -604,15 +604,22 @@
   {
     "type": "case_exp",
     "named": true,
-    "fields": {},
+    "fields": {
+      "case_exp": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_exp",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "_exp",
-          "named": true
-        },
         {
           "type": "mrule",
           "named": true

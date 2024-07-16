@@ -392,7 +392,7 @@ module.exports = grammar({
         seq('else', field('else_exp', $._exp))),
     )),
     iter_exp: $ => prec(3, seq('while', field('while_exp', $._exp), 'do', field('do_exp', $._exp))),
-    case_exp: $ => prec(2, seq('case', $._exp, 'of', $._match)),
+    case_exp: $ => prec(2, seq('case', field('case_exp', $._exp), 'of', $._match)),
     fn_exp: $ => prec(1, seq('fn', $._match)),
 
     _match: $ => prec.right(seq(optBar, mkSepBy1('|', $.mrule))),

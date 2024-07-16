@@ -1481,8 +1481,12 @@
             "value": "case"
           },
           {
-            "type": "SYMBOL",
-            "name": "_exp"
+            "type": "FIELD",
+            "name": "case_exp",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_exp"
+            }
           },
           {
             "type": "STRING",
