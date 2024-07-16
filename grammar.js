@@ -654,11 +654,13 @@ module.exports = grammar({
     strid_strexp: $ => $.longstrid,
     constr_strexp: $ => seq($._strexp, choice(':', ':>'), $._sigexp),
     fctapp_strexp: $ => seq(
-      $.fctid,
+      field('name', $.fctid),
       '(',
-      choice(
-        $._strexp,
-        repeat(choice(';', $._strdec)),
+      field('arg',
+        choice(
+          $._strexp,
+          repeat(choice(';', $._strdec)),
+        ),
       ),
       ')',
     ),

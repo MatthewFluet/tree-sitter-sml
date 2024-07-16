@@ -1225,24 +1225,35 @@
   {
     "type": "fctapp_strexp",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "_strdec",
-          "named": true
-        },
-        {
-          "type": "_strexp",
-          "named": true
-        },
-        {
-          "type": "fctid",
-          "named": true
-        }
-      ]
+    "fields": {
+      "arg": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "_strdec",
+            "named": true
+          },
+          {
+            "type": "_strexp",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fctid",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
