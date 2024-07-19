@@ -1757,14 +1757,10 @@
           }
         ]
       },
-      "decs": {
+      "dec": {
         "multiple": true,
         "required": false,
         "types": [
-          {
-            "type": ";",
-            "named": false
-          },
           {
             "type": "_dec",
             "named": true
@@ -1787,14 +1783,10 @@
           }
         ]
       },
-      "decs": {
+      "dec": {
         "multiple": true,
         "required": false,
         "types": [
-          {
-            "type": ";",
-            "named": false
-          },
           {
             "type": "_strdec",
             "named": true
@@ -1850,23 +1842,15 @@
         "required": false,
         "types": [
           {
-            "type": ";",
-            "named": false
-          },
-          {
             "type": "_dec",
             "named": true
           }
         ]
       },
-      "decs": {
+      "dec": {
         "multiple": true,
         "required": false,
         "types": [
-          {
-            "type": ";",
-            "named": false
-          },
           {
             "type": "_dec",
             "named": true
@@ -1884,23 +1868,15 @@
         "required": false,
         "types": [
           {
-            "type": ";",
-            "named": false
-          },
-          {
             "type": "_strdec",
             "named": true
           }
         ]
       },
-      "decs": {
+      "dec": {
         "multiple": true,
         "required": false,
         "types": [
-          {
-            "type": ";",
-            "named": false
-          },
           {
             "type": "_strdec",
             "named": true
@@ -2262,16 +2238,17 @@
   {
     "type": "sig_sigexp",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "_spec",
-          "named": true
-        }
-      ]
+    "fields": {
+      "spec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "_spec",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2439,16 +2416,17 @@
   {
     "type": "struct_strexp",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "_strdec",
-          "named": true
-        }
-      ]
+    "fields": {
+      "strdec": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "_strdec",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {

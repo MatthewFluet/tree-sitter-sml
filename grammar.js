@@ -356,7 +356,7 @@ module.exports = grammar({
     sequence_exp: $ => mkBrakSepBy('(', semicolonSep, $._exp, ')'),
     let_exp: $ => seq(
       'let',
-      field('decs', repeat(choice(';', $._dec))),
+      repeat(choice(';', field('dec', $._dec))),
       'in',
       field('body', mkSepBy1(semicolonSep, $._exp)),
       'end',
@@ -512,9 +512,9 @@ module.exports = grammar({
 
     local_dec: $ => seq(
       'local',
-      field('decs', repeat(choice(';', $._dec))),
+      repeat(choice(';', field('dec', $._dec))),
       'in',
-      field('body', repeat(choice(';', $._dec))),
+      repeat(choice(';', field('body', $._dec))),
       'end',
     ),
 
@@ -648,7 +648,7 @@ module.exports = grammar({
 
     struct_strexp: $ => seq(
       'struct',
-      repeat(choice(';', $._strdec)),
+      repeat(choice(';', field('strdec', $._strdec))),
       'end',
     ),
     strid_strexp: $ => $.longstrid,
@@ -666,7 +666,7 @@ module.exports = grammar({
     ),
     let_strexp: $ => seq(
       'let',
-      field('decs', repeat(choice(';', $._strdec))),
+      repeat(choice(';', field('dec', $._strdec))),
       'in',
       field('body', $._strexp),
       'end',
@@ -689,9 +689,9 @@ module.exports = grammar({
 
     local_strdec: $ => seq(
       'local',
-      field('decs', repeat(choice(';', $._strdec))),
+      repeat(choice(';', field('dec', $._strdec))),
       'in',
-      field('body', repeat(choice(';', $._strdec))),
+      repeat(choice(';', field('body', $._strdec))),
       'end',
     ),
 
@@ -707,7 +707,7 @@ module.exports = grammar({
 
     sig_sigexp: $ => seq(
       'sig',
-      repeat(choice(';', $._spec)),
+      repeat(choice(';', field('spec', $._spec))),
       'end',
     ),
     sigid_sigexp: $ => $.sigid,
