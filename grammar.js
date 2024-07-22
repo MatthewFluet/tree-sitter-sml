@@ -337,7 +337,7 @@ module.exports = grammar({
       $.exprow,
       ifExtAlt('recordExpPun', $.labvar_exprow),
     ),
-    exprow: $ => seq(field('lab', $.lab), '=', field('exp', $._exp)),
+    exprow: $ => seq($.lab, '=', $._exp),
     labvar_exprow: $ => seq($.vid, optional(seq(':', $._ty))),
     ellipsis_exprow: $ => seq('...', '=', $._exp),
     recordsel_exp: $ => seq('#', $.lab),
@@ -358,7 +358,7 @@ module.exports = grammar({
       'let',
       repeat(choice(';', field('dec', $._dec))),
       'in',
-      field('body', mkSepBy1(semicolonSep, $._exp)),
+      mkSepBy1(semicolonSep, field('body', $._exp)),
       'end',
     ),
     paren_exp: $ => prec(1, seq('(', $._exp, ')')),
@@ -392,11 +392,11 @@ module.exports = grammar({
         seq('else', field('else_exp', $._exp))),
     )),
     iter_exp: $ => prec(3, seq('while', field('while_exp', $._exp), 'do', field('do_exp', $._exp))),
-    case_exp: $ => prec(2, seq('case', field('case_exp', $._exp), 'of', $._match)),
+    case_exp: $ => prec(2, seq('case', $._exp, 'of', $._match)),
     fn_exp: $ => prec(1, seq('fn', $._match)),
 
     _match: $ => prec.right(seq(optBar, mkSepBy1('|', $.mrule))),
-    mrule: $ => seq(field('pat', $._pat), '=>', field('exp', $._exp)),
+    mrule: $ => seq($._pat, '=>', $._exp),
 
     // ******************************************************** //
     // Declarations and Bindings (Core)
@@ -427,15 +427,15 @@ module.exports = grammar({
     val_dec: $ => seq(
       'val',
       optional('rec'),
-      field('tyvars', optional($.tyvarseq)),
+      optional($.tyvarseq),
       $._valbind,
     ),
     _valbind: $ => mkSepBy1('and', $.valbind),
-    valbind: $ => seq($._pat, '=', field('def', $._exp)),
+    valbind: $ => seq(field('pat', $._pat), '=', field('def', $._exp)),
 
     fun_dec: $ => seq(
       'fun',
-      field('tyvars', optional($.tyvarseq)),
+      optional($.tyvarseq),
       $._fvalbind,
     ),
     _fvalbind: $ => mkSepBy1('and', $.fvalbind),
@@ -443,8 +443,8 @@ module.exports = grammar({
     _fmatch: $ => seq(optBar, mkSepBy1('|', $.fmrule)),
     fmrule: $ => seq(
       choice(
-        prec(2, seq(optional('op'), field('name', $.vid), field('args', repeat1($._atpat)))),
-        prec(2, seq('(', field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat), ')', field('args', repeat($._atpat)))),
+        prec(2, seq(optional('op'), field('name', $.vid), repeat1(field('arg', $._atpat)))),
+        prec(2, seq('(', field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat), ')', repeat(field('arg', $._atpat)))),
         prec(0, seq(field('argl', $._atpat), field('name', $.vid), field('argr', $._atpat))),
       ),
       optional(seq(':', field('ty', $._ty))),
@@ -455,7 +455,7 @@ module.exports = grammar({
     type_dec: $ => seq('type', $._typbind),
     _typbind: $ => mkSepBy1('and', $.typbind),
     typbind: $ => seq(
-      field('tyvars', optional($.tyvarseq)),
+      optional($.tyvarseq),
       field('name', $.tycon),
       '=',
       field('def', $._ty),
@@ -464,18 +464,18 @@ module.exports = grammar({
     datatype_dec: $ => seq(
       'datatype',
       $._datbind,
-      optional(field('withtype', seq('withtype', $._typbind))),
+      optional(seq('withtype', field('withtype', $._typbind))),
     ),
     _datbind: $ => mkSepBy1('and', $.datbind),
     datbind: $ => seq(
-      field('tyvars', optional($.tyvarseq)),
+      optional($.tyvarseq),
       field('name', $.tycon),
       '=',
       field('def', $._conbind),
     ),
     _conbind: $ => seq(optBar, mkSepBy1('|', $.conbind)),
     conbind: $ => seq(
-      field('name', seq(optional('op'), $.vid)),
+      seq(optional('op'), field('name', $.vid)),
       optional(seq('of', field('ty', $._ty))),
     ),
 
@@ -490,9 +490,9 @@ module.exports = grammar({
     abstype_dec: $ => seq(
       'abstype',
       $._datbind,
-      optional(field('withtype', seq('withtype', $._typbind))),
+      optional(seq('withtype', field('withtype', $._typbind))),
       'with',
-      field('decs', repeat(choice(';', $._dec))),
+      repeat(choice(';', field('dec', $._dec))),
       'end',
     ),
 
@@ -500,13 +500,13 @@ module.exports = grammar({
     _exbind: $ => mkSepBy1('and', $.exbind),
     exbind: $ => choice(
       seq(
-        field('name', seq(optional('op'), $.vid)),
+        seq(optional('op'), field('name', $.vid)),
         optional(seq('of', field('ty', $._ty))),
       ),
       seq(
-        field('name', seq(optional('op'), $.vid)),
+        seq(optional('op'), field('name', $.vid)),
         '=',
-        field('def', seq(optional('op'), $.longvid)),
+        seq(optional('op'), field('def', $.longvid)),
       ),
     ),
 
@@ -552,7 +552,7 @@ module.exports = grammar({
       '}',
     ),
     _patrow: $ => choice($.patrow, $.labvar_patrow),
-    patrow: $ => seq(field('lab', $.lab), '=', field('pat', $._pat)),
+    patrow: $ => seq($.lab, '=', $._pat),
     labvar_patrow: $ => seq(
       $.vid,
       optional(seq(':', $._ty)),
@@ -618,7 +618,7 @@ module.exports = grammar({
       ifExtElse('recordExt', {elt: $.ellipsis_tyrow, rqd: false}, false),
       '}',
     ),
-    tyrow: $ => seq(field('lab', $.lab), ':', field('ty', $._ty)),
+    tyrow: $ => seq($.lab, ':', $._ty),
     ellipsis_tyrow: $ => seq('...', ':', $._ty),
     tycon_ty: $ => seq(
       optional($.tyseq),
@@ -758,7 +758,7 @@ module.exports = grammar({
     type_spec: $ => seq('type', choice($._typedesc, $._typbind)),
     _typedesc: $ => mkSepBy1('and', $.typedesc),
     typedesc: $ => seq(
-      field('tyvars', optional($.tyvarseq)),
+      optional($.tyvarseq),
       field('name', $.tycon),
     ),
 
@@ -767,7 +767,7 @@ module.exports = grammar({
     datatype_spec: $ => seq(
       'datatype',
       $._datdesc,
-      ifExtOpt('sigWithtype', field('withtype', seq('withtype', $._typbind))),
+      ifExtOpt('sigWithtype', seq('withtype', field('withtype', $._typbind))),
     ),
     _datdesc: $ => mkSepBy1('and', $.datdesc),
     datdesc: $ => seq(

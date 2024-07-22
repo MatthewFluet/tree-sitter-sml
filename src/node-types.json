@@ -455,14 +455,10 @@
     "type": "abstype_dec",
     "named": true,
     "fields": {
-      "decs": {
+      "dec": {
         "multiple": true,
         "required": false,
         "types": [
-          {
-            "type": ";",
-            "named": false
-          },
           {
             "type": "_dec",
             "named": true
@@ -480,10 +476,6 @@
           {
             "type": "typbind",
             "named": true
-          },
-          {
-            "type": "withtype",
-            "named": false
           }
         ]
       }
@@ -604,22 +596,15 @@
   {
     "type": "case_exp",
     "named": true,
-    "fields": {
-      "case_exp": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "_exp",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "_exp",
+          "named": true
+        },
         {
           "type": "mrule",
           "named": true
@@ -632,13 +617,9 @@
     "named": true,
     "fields": {
       "name": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "op",
-            "named": false
-          },
           {
             "type": "vid",
             "named": true
@@ -835,10 +816,6 @@
           {
             "type": "typbind",
             "named": true
-          },
-          {
-            "type": "withtype",
-            "named": false
           }
         ]
       }
@@ -869,10 +846,6 @@
           {
             "type": "typbind",
             "named": true
-          },
-          {
-            "type": "withtype",
-            "named": false
           }
         ]
       }
@@ -915,17 +888,17 @@
             "named": true
           }
         ]
-      },
-      "tyvars": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "tyvarseq",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "tyvarseq",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1108,27 +1081,19 @@
     "named": true,
     "fields": {
       "def": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
             "type": "longvid",
             "named": true
-          },
-          {
-            "type": "op",
-            "named": false
           }
         ]
       },
       "name": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "op",
-            "named": false
-          },
           {
             "type": "vid",
             "named": true
@@ -1206,27 +1171,20 @@
   {
     "type": "exprow",
     "named": true,
-    "fields": {
-      "exp": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "_exp",
-            "named": true
-          }
-        ]
-      },
-      "lab": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "lab",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_exp",
+          "named": true
+        },
+        {
+          "type": "lab",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -1334,6 +1292,48 @@
     "type": "fmrule",
     "named": true,
     "fields": {
+      "arg": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "list_pat",
+            "named": true
+          },
+          {
+            "type": "paren_pat",
+            "named": true
+          },
+          {
+            "type": "record_pat",
+            "named": true
+          },
+          {
+            "type": "scon_pat",
+            "named": true
+          },
+          {
+            "type": "tuple_pat",
+            "named": true
+          },
+          {
+            "type": "unit_pat",
+            "named": true
+          },
+          {
+            "type": "vec_pat",
+            "named": true
+          },
+          {
+            "type": "vid_pat",
+            "named": true
+          },
+          {
+            "type": "wildcard_pat",
+            "named": true
+          }
+        ]
+      },
       "argl": {
         "multiple": false,
         "required": false,
@@ -1378,48 +1378,6 @@
       },
       "argr": {
         "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "list_pat",
-            "named": true
-          },
-          {
-            "type": "paren_pat",
-            "named": true
-          },
-          {
-            "type": "record_pat",
-            "named": true
-          },
-          {
-            "type": "scon_pat",
-            "named": true
-          },
-          {
-            "type": "tuple_pat",
-            "named": true
-          },
-          {
-            "type": "unit_pat",
-            "named": true
-          },
-          {
-            "type": "vec_pat",
-            "named": true
-          },
-          {
-            "type": "vid_pat",
-            "named": true
-          },
-          {
-            "type": "wildcard_pat",
-            "named": true
-          }
-        ]
-      },
-      "args": {
-        "multiple": true,
         "required": false,
         "types": [
           {
@@ -1545,24 +1503,17 @@
   {
     "type": "fun_dec",
     "named": true,
-    "fields": {
-      "tyvars": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "tyvarseq",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
           "type": "fvalbind",
+          "named": true
+        },
+        {
+          "type": "tyvarseq",
           "named": true
         }
       ]
@@ -1747,10 +1698,6 @@
         "multiple": true,
         "required": true,
         "types": [
-          {
-            "type": ";",
-            "named": false
-          },
           {
             "type": "_exp",
             "named": true
@@ -1941,27 +1888,20 @@
   {
     "type": "mrule",
     "named": true,
-    "fields": {
-      "exp": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "_exp",
-            "named": true
-          }
-        ]
-      },
-      "pat": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "_pat",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_exp",
+          "named": true
+        },
+        {
+          "type": "_pat",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2042,27 +1982,20 @@
   {
     "type": "patrow",
     "named": true,
-    "fields": {
-      "lab": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "lab",
-            "named": true
-          }
-        ]
-      },
-      "pat": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "_pat",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_pat",
+          "named": true
+        },
+        {
+          "type": "lab",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2563,17 +2496,17 @@
             "named": true
           }
         ]
-      },
-      "tyvars": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "tyvarseq",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "tyvarseq",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2661,43 +2594,36 @@
             "named": true
           }
         ]
-      },
-      "tyvars": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "tyvarseq",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "tyvarseq",
+          "named": true
+        }
+      ]
     }
   },
   {
     "type": "tyrow",
     "named": true,
-    "fields": {
-      "lab": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "lab",
-            "named": true
-          }
-        ]
-      },
-      "ty": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "_ty",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_ty",
+          "named": true
+        },
+        {
+          "type": "lab",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2763,22 +2689,15 @@
   {
     "type": "val_dec",
     "named": true,
-    "fields": {
-      "tyvars": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "tyvarseq",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "tyvarseq",
+          "named": true
+        },
         {
           "type": "valbind",
           "named": true
@@ -2814,17 +2733,17 @@
             "named": true
           }
         ]
+      },
+      "pat": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_pat",
+            "named": true
+          }
+        ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "_pat",
-          "named": true
-        }
-      ]
     }
   },
   {
