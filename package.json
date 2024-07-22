@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-sml",
-  "version": "0.22.0",
+  "version": "0.22.1",
   "description": "Standard ML (SML) grammar for tree-sitter",
   "author": "Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)",
   "repository": "github:MatthewFluet/tree-sitter-sml",
