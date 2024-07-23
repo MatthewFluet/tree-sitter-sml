@@ -83,7 +83,6 @@ const alphaNumericIdentSuffixRE = /[A-Za-z0-9_']*/.source;
 const alphaAlphaNumericIdentRE = `[A-Za-z]${alphaNumericIdentSuffixRE}`;
 const primeAlphaNumericIdentRE = `'${alphaNumericIdentSuffixRE}`;
 const symbolicIdentRE = /[!%&$#+\-/:<=>?@\\~`^|*]+/.source;
-// const identRE = `(?:${alphaAlphaNumericIdentRE})|(?:${primeAlphaNumericIdentRE})|(?:${symbolicIdentRE})`;
 
 // ******************************************************** //
 // "Separated By"
