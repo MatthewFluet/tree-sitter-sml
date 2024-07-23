@@ -34,7 +34,7 @@ function ifExtOpt(ext, resExt) {
   return ifExtElse(ext, optional(resExt), blank());
 }
 
-const optBar = ifExtOpt('optBar', token('|'));
+const optBar = ifExtOpt('optBar', '|');
 
 // ******************************************************** //
 // Regular Expressions for Constants
@@ -43,19 +43,19 @@ const optBar = ifExtOpt('optBar', token('|'));
 const decDigitRE = '[0-9]';
 const decNumRE = ifExtElse(
   'extendedNumConst',
-  `${decDigitRE}(_*${decDigitRE})*`,
+  `${decDigitRE}(?:_*${decDigitRE})*`,
   `${decDigitRE}+`,
 );
 const hexDigitRE = '[A-Fa-f0-9]';
 const hexNumRE = ifExtElse(
   'extendedNumConst',
-  `${hexDigitRE}(_*${hexDigitRE})*`,
+  `${hexDigitRE}(?:_*${hexDigitRE})*`,
   `${hexDigitRE}+`,
 );
 const binDigitRE = '[01]';
 const binNumRE = ifExtElse(
   'extendedNumConst',
-  `${binDigitRE}(_*${binDigitRE})*`,
+  `${binDigitRE}(?:_*${binDigitRE})*`,
   `${binDigitRE}+`,
 );
 const integerConstRE = ifExtElse(
@@ -72,6 +72,9 @@ const fracRE = `[.]${decNumRE}`;
 const expRE = `[eE]~?${decNumRE}`;
 const realConstRE = `~?${decNumRE}${fracRE}(?:${expRE})?|~?${decNumRE}(?:${fracRE})?${expRE}`;
 
+const stringConstRE = '"(?:[^"\\\\]|\\\\[^\\s]|\\\\\\s*\\\\)*"';
+const charConstRE = '#"(?:[^"\\\\]|\\\\[^\\s]|\\\\\\s*\\\\)*"';
+
 // ******************************************************** //
 // Regular Expressions Identifiers
 // ******************************************************** //
@@ -86,8 +89,8 @@ const symbolicIdentRE = /[!%&$#+\-/:<=>?@\\~`^|*]+/.source;
 // "Separated By"
 // ******************************************************** //
 
-const commaSep = {name: 'Comma', token: token(',')};
-const semicolonSep = {name: 'Semicolon', token: token(';')};
+const commaSep = {name: 'Comma', token: ','};
+const semicolonSep = {name: 'Semicolon', token: ';'};
 
 function mkSepByAux(cnt, pre, sep, elt, pst) {
   if (cnt > 0) {
@@ -226,7 +229,7 @@ module.exports = grammar({
   name: 'sml',
 
   extras: $ => [
-    token(/\s+/),
+    /\s+/,
     $.block_comment,
     ...ifExtElse('lineComment', [$.line_comment], []),
   ],
@@ -283,19 +286,19 @@ module.exports = grammar({
       $.char_scon,
     ),
 
-    integer_scon: $ => token(new RegExp(integerConstRE)),
-    word_scon: $ => token(new RegExp(wordConstRE)),
-    real_scon: $ => token(new RegExp(realConstRE)),
-    string_scon: $ => token(/"(?:[^"\\]|\\[^\s]|\\\s*\\)*"/),
-    char_scon: $ => token(/#"(?:[^"\\]|\\[^\s]|\\\s*\\)*"/),
+    integer_scon: $ => new RegExp(integerConstRE),
+    word_scon: $ => new RegExp(wordConstRE),
+    real_scon: $ => new RegExp(realConstRE),
+    string_scon: $ => new RegExp(stringConstRE),
+    char_scon: $ => new RegExp(charConstRE),
 
     // ******************************************************** //
     // Identifier Classes (Core)
     // ******************************************************** //
 
-    _alphaAlphaNumeric_ident: $ => token(new RegExp(alphaAlphaNumericIdentRE)),
-    _primeAlphaNumeric_ident: $ => token(new RegExp(primeAlphaNumericIdentRE)),
-    _symbolic_ident: $ => token(new RegExp(symbolicIdentRE)),
+    _alphaAlphaNumeric_ident: $ => new RegExp(alphaAlphaNumericIdentRE),
+    _primeAlphaNumeric_ident: $ => new RegExp(primeAlphaNumericIdentRE),
+    _symbolic_ident: $ => new RegExp(symbolicIdentRE),
 
     tyvar: $ => choice($._primeAlphaNumeric_ident),
     tyvarseq: $ => mkSeq($.tyvar),
