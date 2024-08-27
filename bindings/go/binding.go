@@ -2,6 +2,7 @@ package tree_sitter_sml
 
 // #cgo CFLAGS: -std=c11 -fPIC
 // #include "../../src/parser.c"
+// // NOTE: if your language has an external scanner, add it here.
 // #include "../../src/scanner.c"
 import "C"
 

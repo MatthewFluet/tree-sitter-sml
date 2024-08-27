@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-sml",
-  "version": "0.22.1",
+  "version": "0.23.0",
   "description": "Standard ML (SML) grammar for tree-sitter",
   "author": "Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)",
   "repository": "github:MatthewFluet/tree-sitter-sml",
@@ -30,7 +30,7 @@
     "eslint": "^8.57.0",
     "eslint-config-google": "^0.14.0",
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.22.6"
+    "tree-sitter-cli": "^0.23.0"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.0"
@@ -47,15 +47,19 @@
     "lint": "eslint grammar.js",
     "lint-fix": "eslint --fix grammar.js",
     "parse": "tree-sitter parse",
-    "prebuildify": "prebuildify --napi --strip",
-    "test": "tree-sitter test"
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
   },
   "tree-sitter": [
     {
       "scope": "source.sml",
       "injection-regex": "^sml$",
       "file-types": [
-        "sml", "sig", "fun", "ML"
+        "sml",
+        "sig",
+        "fun",
+        "ML"
       ],
       "highlights": "queries/highlights.scm"
     }

@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+grequires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "tree-sitter-sml"
 description = "Standard ML (SML) grammar for tree-sitter"
-version = "0.22.1"
+version = "0.23.0"
 authors = [
   {name = "Matthew Fluet", email = "Matthew.Fluet@gmail.com"},
 ]
@@ -17,7 +17,7 @@ classifiers = [
   "Topic :: Text Processing :: Linguistic",
   "Typing :: Typed"
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license.text = "MIT"
 readme = "README.md"
 
@@ -25,8 +25,8 @@ readme = "README.md"
 Homepage = "https://github.com/MatthewFluet/tree-sitter-sml"
 
 [project.optional-dependencies]
-core = ["tree-sitter~=0.21"]
+core = ["tree-sitter~=0.22"]
 
 [tool.cibuildwheel]
-build = "cp38-*"
+build = "cp39-*"
 build-frontend = "build"
