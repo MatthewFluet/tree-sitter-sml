@@ -5635,5 +5635,196 @@
     "_fctdec",
     "_topdec"
   ],
-  "reserved": {}
+  "reserved": {
+    "global": [
+      {
+        "type": "STRING",
+        "value": "abstype"
+      },
+      {
+        "type": "STRING",
+        "value": "and"
+      },
+      {
+        "type": "STRING",
+        "value": "andalso"
+      },
+      {
+        "type": "STRING",
+        "value": "as"
+      },
+      {
+        "type": "STRING",
+        "value": "case"
+      },
+      {
+        "type": "STRING",
+        "value": "datatype"
+      },
+      {
+        "type": "STRING",
+        "value": "do"
+      },
+      {
+        "type": "STRING",
+        "value": "else"
+      },
+      {
+        "type": "STRING",
+        "value": "end"
+      },
+      {
+        "type": "STRING",
+        "value": "exception"
+      },
+      {
+        "type": "STRING",
+        "value": "fn"
+      },
+      {
+        "type": "STRING",
+        "value": "fun"
+      },
+      {
+        "type": "STRING",
+        "value": "handle"
+      },
+      {
+        "type": "STRING",
+        "value": "if"
+      },
+      {
+        "type": "STRING",
+        "value": "in"
+      },
+      {
+        "type": "STRING",
+        "value": "infix"
+      },
+      {
+        "type": "STRING",
+        "value": "infixr"
+      },
+      {
+        "type": "STRING",
+        "value": "let"
+      },
+      {
+        "type": "STRING",
+        "value": "local"
+      },
+      {
+        "type": "STRING",
+        "value": "nonfix"
+      },
+      {
+        "type": "STRING",
+        "value": "of"
+      },
+      {
+        "type": "STRING",
+        "value": "op"
+      },
+      {
+        "type": "STRING",
+        "value": "open"
+      },
+      {
+        "type": "STRING",
+        "value": "orelse"
+      },
+      {
+        "type": "STRING",
+        "value": "raise"
+      },
+      {
+        "type": "STRING",
+        "value": "rec"
+      },
+      {
+        "type": "STRING",
+        "value": "then"
+      },
+      {
+        "type": "STRING",
+        "value": "type"
+      },
+      {
+        "type": "STRING",
+        "value": "val"
+      },
+      {
+        "type": "STRING",
+        "value": "with"
+      },
+      {
+        "type": "STRING",
+        "value": "withtype"
+      },
+      {
+        "type": "STRING",
+        "value": "while"
+      },
+      {
+        "type": "STRING",
+        "value": ":"
+      },
+      {
+        "type": "STRING",
+        "value": "|"
+      },
+      {
+        "type": "STRING",
+        "value": "=>"
+      },
+      {
+        "type": "STRING",
+        "value": "->"
+      },
+      {
+        "type": "STRING",
+        "value": "#"
+      },
+      {
+        "type": "STRING",
+        "value": "eqtype"
+      },
+      {
+        "type": "STRING",
+        "value": "functor"
+      },
+      {
+        "type": "STRING",
+        "value": "include"
+      },
+      {
+        "type": "STRING",
+        "value": "sharing"
+      },
+      {
+        "type": "STRING",
+        "value": "sig"
+      },
+      {
+        "type": "STRING",
+        "value": "signature"
+      },
+      {
+        "type": "STRING",
+        "value": "struct"
+      },
+      {
+        "type": "STRING",
+        "value": "structure"
+      },
+      {
+        "type": "STRING",
+        "value": "where"
+      },
+      {
+        "type": "STRING",
+        "value": ":>"
+      }
+    ]
+  }
 }

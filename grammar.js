@@ -265,6 +265,21 @@ module.exports = grammar({
 
   word: $ => $._alphaAlphaNumeric_ident,
 
+  reserved: {
+    global: $ => [
+      // Reserved Words Core
+      "abstype", "and", "andalso", "as", "case", "datatype", "do", "else", "end",
+      "exception", "fn", "fun", "handle", "if", "in", "infix", "infixr", "let",
+      "local", "nonfix", "of", "op", "open", "orelse", "raise", "rec", "then",
+      "type", "val", "with", "withtype", "while",
+      ":", "|", /* "=", */ "=>", "->", "#",
+      // Reserved Words Modules
+      "eqtype", "functor", "include", "sharing", "sig", "signature", "struct",
+      "structure", "where",
+      ":>",
+    ],
+  },
+
   rules: {
     source_file: $ => optional($._program),
 
