@@ -10,6 +10,6 @@ import (
 func TestCanLoadGrammar(t *testing.T) {
 	language := tree_sitter.NewLanguage(tree_sitter_sml.Language())
 	if language == nil {
-		t.Errorf("Error loading SML grammar")
+		t.Errorf("Error loading SML (Standard ML) grammar")
 	}
 }

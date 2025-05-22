@@ -7,6 +7,6 @@ final class TreeSitterSMLTests: XCTestCase {
         let parser = Parser()
         let language = Language(language: tree_sitter_sml())
         XCTAssertNoThrow(try parser.setLanguage(language),
-                         "Error loading SML grammar")
+                         "Error loading SML (Standard ML) grammar")
     }
 }

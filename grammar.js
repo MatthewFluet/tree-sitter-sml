@@ -1,6 +1,6 @@
 /**
  * @file Standard ML (SML) grammar for tree-sitter
- * @author Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)
+ * @author Matthew Fluet <Matthew.Fluet@gmail.com>
  * @license MIT
  */
 
@@ -225,7 +225,7 @@ function mkSeq(cls) {
 // ******************************************************** //
 
 module.exports = grammar({
-  name: 'sml',
+  name: "sml",
 
   extras: $ => [
     /\s+/,

@@ -1,39 +1,42 @@
 {
   "name": "tree-sitter-sml",
-  "version": "0.23.0",
+  "version": "0.25.0",
   "description": "Standard ML (SML) grammar for tree-sitter",
-  "author": "Matthew Fluet <Matthew.Fluet@gmail.com> (https://github.com/MatthewFluet)",
-  "repository": "github:MatthewFluet/tree-sitter-sml",
+  "repository": "https://github.com/MatthewFluet/tree-sitter-sml",
   "license": "MIT",
+  "author": {
+    "name": "Matthew Fluet",
+    "email": "Matthew.Fluet@gmail.com",
+    "url": "https://github.com/MatthewFluet"
+  },
   "main": "bindings/node",
   "types": "bindings/node",
   "keywords": [
     "incremental",
     "parsing",
     "tree-sitter",
-    "standard-ml",
     "sml"
   ],
   "files": [
     "grammar.js",
+    "tree-sitter.json",
     "binding.gyp",
     "prebuilds/**",
     "bindings/node/*",
     "queries/*",
-    "src/**"
+    "src/**",
+    "*.wasm"
   ],
   "dependencies": {
-    "node-addon-api": "^8.0.0",
-    "node-gyp-build": "^4.8.1"
+    "node-addon-api": "^8.2.1",
+    "node-gyp-build": "^4.8.2"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-google": "^0.14.0",
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.23.0"
+    "tree-sitter-cli": "^0.25.4"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.0"
+    "tree-sitter": "^0.21.1"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
@@ -41,69 +44,9 @@
     }
   },
   "scripts": {
-    "build": "tree-sitter generate --no-bindings",
-    "build-wasm": "tree-sitter build --wasm",
     "install": "node-gyp-build",
-    "lint": "eslint grammar.js",
-    "lint-fix": "eslint --fix grammar.js",
-    "parse": "tree-sitter parse",
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
     "test": "node --test bindings/node/*_test.js"
-  },
-  "tree-sitter": [
-    {
-      "scope": "source.sml",
-      "injection-regex": "^sml$",
-      "file-types": [
-        "sml",
-        "sig",
-        "fun",
-        "ML"
-      ],
-      "highlights": "queries/highlights.scm"
-    }
-  ],
-  "eslintConfig": {
-    "env": {
-      "commonjs": true,
-      "es2021": true
-    },
-    "extends": "google",
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "rules": {
-      "arrow-parens": "off",
-      "camel-case": "off",
-      "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1
-        }
-      ],
-      "max-len": [
-        "error",
-        {
-          "code": 160,
-          "ignoreComments": true,
-          "ignoreUrls": true,
-          "ignoreStrings": true
-        }
-      ],
-      "spaced-comment": [
-        "warn",
-        "always",
-        {
-          "line": {
-            "markers": [
-              "/"
-            ]
-          }
-        }
-      ]
-    }
   }
 }
